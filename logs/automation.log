@@ -464,3 +464,262 @@ Session ID: 43aab6f72df597b32b09898e62397064
 2026-06-30 12:35:53 INFO  utils.LoggerManager - Clicking Apply button
 2026-06-30 12:35:53 INFO  utils.LoggerManager - Price filter applied successfully
 2026-06-30 12:35:57 INFO  utils.LoggerManager - ===== Test Finished =====
+2026-06-30 14:26:10 INFO  utils.LoggerManager - ===== Test Started =====
+2026-06-30 14:26:10 INFO  utils.LoggerManager - Initializing browser: edge
+2026-06-30 14:26:38 INFO  utils.LoggerManager - ===== Test Started =====
+2026-06-30 14:26:38 INFO  utils.LoggerManager - Initializing browser: chrome
+2026-06-30 14:26:42 INFO  utils.LoggerManager - Chrome browser launched
+2026-06-30 14:26:59 INFO  utils.LoggerManager - Navigated to: https://www.urbanladder.com/
+2026-06-30 14:26:59 INFO  utils.LoggerManager - Starting TC_04
+2026-06-30 14:26:59 INFO  utils.LoggerManager - Waiting for search box
+2026-06-30 14:26:59 INFO  utils.LoggerManager - Clicking search box
+2026-06-30 14:27:00 INFO  utils.LoggerManager - Typing Bookshelves
+2026-06-30 14:27:00 INFO  utils.LoggerManager - Pressing Enter
+2026-06-30 14:27:00 INFO  utils.LoggerManager - Collecting product prices
+2026-06-30 14:27:00 INFO  utils.LoggerManager - Same Price Found : ₹ -> [Alberto Solid Wood Bookshelf in Teak Finish, Paxton Solid Wood Bookshelf in Amber Walnut Finish, Takai Solid Wood Bookshelf in Red Cedar Finish, Torin Solid Wood Bookshelf in Danish Walnut Finish, Tetris Solid Wood Bookshelf in Walnut Finish, Murano Solid Wood Bookshelf in Mango Walnut Finish, Elliot Engineered Wood Bookshelf in Classic Walnut Finish, Austen Solid Wood Bookshelf in Amber Walnut Finish, Rhodes Solid Wood Bookshelf in Teak Finish, Babylon Solid Wood Bookshelf in Walnut Finish, Song Engineered Wood Bookshelf in Columbian Walnut Finish, Enid Solid Wood Bookshelf in Amber Walnut Finish]
+2026-06-30 14:27:03 INFO  utils.LoggerManager - ===== Test Finished =====
+2026-06-30 14:46:34 INFO  utils.LoggerManager - ===== Test Started =====
+2026-06-30 14:46:34 INFO  utils.LoggerManager - Initializing browser: chrome
+2026-06-30 14:46:37 INFO  utils.LoggerManager - Chrome browser launched
+2026-06-30 14:46:53 INFO  utils.LoggerManager - Navigated to: https://www.urbanladder.com/
+2026-06-30 14:46:53 INFO  utils.LoggerManager - Starting TC_04
+2026-06-30 14:46:53 INFO  utils.LoggerManager - Waiting for search box
+2026-06-30 14:46:53 INFO  utils.LoggerManager - Clicking search box
+2026-06-30 14:46:53 INFO  utils.LoggerManager - Typing Bookshelves
+2026-06-30 14:46:53 INFO  utils.LoggerManager - Pressing Enter
+2026-06-30 14:46:53 INFO  utils.LoggerManager - Clicking All Filters
+2026-06-30 14:46:53 INFO  utils.LoggerManager - All Filters opened
+2026-06-30 14:46:53 INFO  utils.LoggerManager - Scrolling to Price
+2026-06-30 14:46:53 INFO  utils.LoggerManager - Setting max price
+2026-06-30 14:46:54 INFO  utils.LoggerManager - Waiting for UI to update after entering price
+2026-06-30 14:46:54 INFO  utils.LoggerManager - Clicking Apply button
+2026-06-30 14:46:54 INFO  utils.LoggerManager - Price filter applied successfully
+2026-06-30 14:46:54 INFO  utils.LoggerManager - Fetching filtered products count
+2026-06-30 14:46:54 INFO  utils.LoggerManager - Count text found: Products
+2026-06-30 14:46:57 INFO  utils.LoggerManager - ===== Test Finished =====
+2026-06-30 14:48:16 INFO  utils.LoggerManager - ===== Test Started =====
+2026-06-30 14:48:16 INFO  utils.LoggerManager - Initializing browser: chrome
+2026-06-30 14:48:18 INFO  utils.LoggerManager - Chrome browser launched
+2026-06-30 14:48:34 INFO  utils.LoggerManager - Navigated to: https://www.urbanladder.com/
+2026-06-30 14:48:34 INFO  utils.LoggerManager - Starting TC_01
+2026-06-30 14:48:34 INFO  utils.LoggerManager - Waiting for search box
+2026-06-30 14:48:35 INFO  utils.LoggerManager - Clicking search box
+2026-06-30 14:48:35 INFO  utils.LoggerManager - Typing Bookshelves
+2026-06-30 14:48:35 INFO  utils.LoggerManager - Pressing Enter
+2026-06-30 14:48:39 INFO  utils.LoggerManager - ===== Test Finished =====
+2026-06-30 14:48:57 INFO  utils.LoggerManager - ===== Test Started =====
+2026-06-30 14:48:57 INFO  utils.LoggerManager - Initializing browser: chrome
+2026-06-30 14:49:00 INFO  utils.LoggerManager - Chrome browser launched
+2026-06-30 14:49:17 INFO  utils.LoggerManager - Navigated to: https://www.urbanladder.com/
+2026-06-30 14:49:17 INFO  utils.LoggerManager - Starting TC_04
+2026-06-30 14:49:17 INFO  utils.LoggerManager - Waiting for search box
+2026-06-30 14:49:17 INFO  utils.LoggerManager - Clicking search box
+2026-06-30 14:49:17 INFO  utils.LoggerManager - Typing Bookshelves
+2026-06-30 14:49:17 INFO  utils.LoggerManager - Pressing Enter
+2026-06-30 14:49:17 INFO  utils.LoggerManager - Clicking All Filters
+2026-06-30 14:49:18 INFO  utils.LoggerManager - All Filters opened
+2026-06-30 14:49:18 INFO  utils.LoggerManager - Scrolling to Price
+2026-06-30 14:49:18 INFO  utils.LoggerManager - Setting max price
+2026-06-30 14:49:18 INFO  utils.LoggerManager - Waiting for UI to update after entering price
+2026-06-30 14:49:18 INFO  utils.LoggerManager - Clicking Apply button
+2026-06-30 14:49:19 INFO  utils.LoggerManager - Price filter applied successfully
+2026-06-30 14:49:19 INFO  utils.LoggerManager - Fetching filtered products count
+2026-06-30 14:49:19 INFO  utils.LoggerManager - Count text found: 607 Products
+2026-06-30 14:49:19 INFO  utils.LoggerManager - Total filtered products: 607
+2026-06-30 14:49:19 INFO  utils.LoggerManager - Number of Bookshelves below ₹15000 : 607
+2026-06-30 14:49:22 INFO  utils.LoggerManager - ===== Test Finished =====
+2026-06-30 14:52:59 INFO  utils.LoggerManager - ===== Test Started =====
+2026-06-30 14:52:59 INFO  utils.LoggerManager - Initializing browser: chrome
+2026-06-30 14:53:02 INFO  utils.LoggerManager - Chrome browser launched
+2026-06-30 14:54:24 INFO  utils.LoggerManager - ===== Test Started =====
+2026-06-30 14:54:24 INFO  utils.LoggerManager - Initializing browser: chrome
+2026-06-30 14:54:27 INFO  utils.LoggerManager - Chrome browser launched
+2026-06-30 14:54:37 INFO  utils.LoggerManager - Navigated to: https://www.urbanladder.com/
+2026-06-30 14:54:37 INFO  utils.LoggerManager - Starting TC_04
+2026-06-30 14:54:37 INFO  utils.LoggerManager - Waiting for search box
+2026-06-30 14:54:37 INFO  utils.LoggerManager - Clicking search box
+2026-06-30 14:54:37 INFO  utils.LoggerManager - Typing Bookshelves
+2026-06-30 14:54:37 INFO  utils.LoggerManager - Pressing Enter
+2026-06-30 14:54:37 INFO  utils.LoggerManager - Clicking All Filters
+2026-06-30 14:54:38 INFO  utils.LoggerManager - All Filters opened
+2026-06-30 14:54:38 INFO  utils.LoggerManager - Scrolling to Price
+2026-06-30 14:54:38 INFO  utils.LoggerManager - Setting max price
+2026-06-30 14:54:38 INFO  utils.LoggerManager - Waiting for UI to update after entering price
+2026-06-30 14:54:38 INFO  utils.LoggerManager - Clicking Apply button
+2026-06-30 14:54:38 INFO  utils.LoggerManager - Price filter applied successfully
+2026-06-30 14:54:38 INFO  utils.LoggerManager - Count text found: 366 Products
+2026-06-30 14:54:38 INFO  utils.LoggerManager - Number of Bookshelves below ₹15000 : 366
+2026-06-30 14:54:42 INFO  utils.LoggerManager - ===== Test Finished =====
+2026-06-30 15:09:38 INFO  utils.LoggerManager - ===== Test Started =====
+2026-06-30 15:09:38 INFO  utils.LoggerManager - Initializing browser: chrome
+2026-06-30 15:09:41 INFO  utils.LoggerManager - Chrome browser launched
+2026-06-30 15:10:12 INFO  utils.LoggerManager - ===== Test Started =====
+2026-06-30 15:10:12 INFO  utils.LoggerManager - Initializing browser: chrome
+2026-06-30 15:10:14 INFO  utils.LoggerManager - Chrome browser launched
+2026-06-30 15:10:44 INFO  utils.LoggerManager - ===== Test Started =====
+2026-06-30 15:10:44 INFO  utils.LoggerManager - Initializing browser: chrome
+2026-06-30 15:10:47 INFO  utils.LoggerManager - Chrome browser launched
+2026-06-30 15:11:05 INFO  utils.LoggerManager - Navigated to: https://www.urbanladder.com/
+2026-06-30 15:11:05 INFO  utils.LoggerManager - Starting TC_03 - Filter by Open Storage
+2026-06-30 15:11:05 INFO  utils.LoggerManager - Waiting for search box
+2026-06-30 15:11:27 INFO  utils.LoggerManager - ===== Test Started =====
+2026-06-30 15:11:27 INFO  utils.LoggerManager - Initializing browser: chrome
+2026-06-30 15:11:30 INFO  utils.LoggerManager - Chrome browser launched
+2026-06-30 15:14:51 INFO  utils.LoggerManager - ===== Test Started =====
+2026-06-30 15:14:51 INFO  utils.LoggerManager - Initializing browser: chrome
+2026-06-30 15:14:54 INFO  utils.LoggerManager - Chrome browser launched
+2026-06-30 15:15:07 INFO  utils.LoggerManager - Navigated to: https://www.urbanladder.com/
+2026-06-30 15:15:07 INFO  utils.LoggerManager - Starting TC_01
+2026-06-30 15:15:07 INFO  utils.LoggerManager - Waiting for search box
+2026-06-30 15:15:08 INFO  utils.LoggerManager - Clicking search box
+2026-06-30 15:15:08 INFO  utils.LoggerManager - Typing Bookshelves
+2026-06-30 15:15:08 INFO  utils.LoggerManager - Pressing Enter
+2026-06-30 15:15:11 INFO  utils.LoggerManager - ===== Test Finished =====
+2026-06-30 15:18:00 INFO  utils.LoggerManager - ===== Test Started =====
+2026-06-30 15:18:00 INFO  utils.LoggerManager - Initializing browser: chrome
+2026-06-30 15:18:03 INFO  utils.LoggerManager - Chrome browser launched
+2026-06-30 15:18:19 INFO  utils.LoggerManager - Navigated to: https://www.urbanladder.com/
+2026-06-30 15:18:19 INFO  utils.LoggerManager - Starting TC_01
+2026-06-30 15:18:19 INFO  utils.LoggerManager - Waiting for search box
+2026-06-30 15:18:19 INFO  utils.LoggerManager - Clicking search box
+2026-06-30 15:18:19 INFO  utils.LoggerManager - Typing Bookshelves
+2026-06-30 15:18:19 INFO  utils.LoggerManager - Pressing Enter
+2026-06-30 15:18:23 INFO  utils.LoggerManager - ===== Test Finished =====
+2026-06-30 15:18:23 INFO  utils.LoggerManager - ===== Test Started =====
+2026-06-30 15:18:23 INFO  utils.LoggerManager - Initializing browser: chrome
+2026-06-30 15:18:25 INFO  utils.LoggerManager - Chrome browser launched
+2026-06-30 15:18:36 INFO  utils.LoggerManager - Navigated to: https://www.urbanladder.com/
+2026-06-30 15:18:36 INFO  utils.LoggerManager - Starting TC_02 - Price Filter
+2026-06-30 15:18:36 INFO  utils.LoggerManager - Waiting for search box
+2026-06-30 15:18:36 INFO  utils.LoggerManager - Clicking search box
+2026-06-30 15:18:36 INFO  utils.LoggerManager - Typing Bookshelves
+2026-06-30 15:18:36 INFO  utils.LoggerManager - Pressing Enter
+2026-06-30 15:18:37 INFO  utils.LoggerManager - Clicking All Filters
+2026-06-30 15:18:37 INFO  utils.LoggerManager - All Filters opened
+2026-06-30 15:18:37 INFO  utils.LoggerManager - Scrolling to Price
+2026-06-30 15:18:37 INFO  utils.LoggerManager - Setting max price
+2026-06-30 15:18:37 INFO  utils.LoggerManager - Waiting for UI to update after entering price
+2026-06-30 15:18:37 INFO  utils.LoggerManager - Clicking Apply button
+2026-06-30 15:18:37 INFO  utils.LoggerManager - Price filter applied successfully
+2026-06-30 15:18:41 INFO  utils.LoggerManager - ===== Test Finished =====
+2026-06-30 15:19:45 INFO  utils.LoggerManager - ===== Test Started =====
+2026-06-30 15:19:45 INFO  utils.LoggerManager - Initializing browser: chrome
+2026-06-30 15:19:48 INFO  utils.LoggerManager - Chrome browser launched
+2026-06-30 15:19:54 INFO  utils.LoggerManager - Navigated to: https://www.urbanladder.com/
+2026-06-30 15:19:54 INFO  utils.LoggerManager - Starting TC_01
+2026-06-30 15:19:54 INFO  utils.LoggerManager - Waiting for search box
+2026-06-30 15:19:54 INFO  utils.LoggerManager - Clicking search box
+2026-06-30 15:19:54 INFO  utils.LoggerManager - Typing Bookshelves
+2026-06-30 15:19:55 INFO  utils.LoggerManager - Pressing Enter
+2026-06-30 15:19:58 INFO  utils.LoggerManager - ===== Test Finished =====
+2026-06-30 15:19:58 INFO  utils.LoggerManager - ===== Test Started =====
+2026-06-30 15:19:58 INFO  utils.LoggerManager - Initializing browser: chrome
+2026-06-30 15:20:01 INFO  utils.LoggerManager - Chrome browser launched
+2026-06-30 15:20:05 INFO  utils.LoggerManager - Navigated to: https://www.urbanladder.com/
+2026-06-30 15:20:05 INFO  utils.LoggerManager - Starting TC_02 - Price Filter
+2026-06-30 15:20:05 INFO  utils.LoggerManager - Waiting for search box
+2026-06-30 15:20:06 INFO  utils.LoggerManager - Clicking search box
+2026-06-30 15:20:06 INFO  utils.LoggerManager - Typing Bookshelves
+2026-06-30 15:20:06 INFO  utils.LoggerManager - Pressing Enter
+2026-06-30 15:20:06 INFO  utils.LoggerManager - Clicking All Filters
+2026-06-30 15:20:07 INFO  utils.LoggerManager - All Filters opened
+2026-06-30 15:20:07 INFO  utils.LoggerManager - Scrolling to Price
+2026-06-30 15:20:07 INFO  utils.LoggerManager - Setting max price
+2026-06-30 15:20:07 INFO  utils.LoggerManager - Waiting for UI to update after entering price
+2026-06-30 15:20:07 INFO  utils.LoggerManager - Clicking Apply button
+2026-06-30 15:20:07 INFO  utils.LoggerManager - Price filter applied successfully
+2026-06-30 15:20:10 INFO  utils.LoggerManager - ===== Test Finished =====
+2026-06-30 15:20:10 INFO  utils.LoggerManager - ===== Test Started =====
+2026-06-30 15:20:10 INFO  utils.LoggerManager - Initializing browser: chrome
+2026-06-30 15:20:13 INFO  utils.LoggerManager - Chrome browser launched
+2026-06-30 15:20:26 INFO  utils.LoggerManager - Navigated to: https://www.urbanladder.com/
+2026-06-30 15:20:26 INFO  utils.LoggerManager - Starting TC_03 - Filter by Open Storage
+2026-06-30 15:20:26 INFO  utils.LoggerManager - Waiting for search box
+2026-06-30 15:20:26 INFO  utils.LoggerManager - Clicking search box
+2026-06-30 15:20:26 INFO  utils.LoggerManager - Typing Bookshelves
+2026-06-30 15:20:26 INFO  utils.LoggerManager - Pressing Enter
+2026-06-30 15:20:26 INFO  utils.LoggerManager - Bookshelves searched
+2026-06-30 15:20:26 INFO  utils.LoggerManager - Clicking All Filters button
+2026-06-30 15:20:27 INFO  utils.LoggerManager - Filters panel opened successfully
+2026-06-30 15:20:27 INFO  utils.LoggerManager - Filters opened
+2026-06-30 15:20:27 INFO  utils.LoggerManager - Scrolling inside All Filters panel
+2026-06-30 15:20:27 INFO  utils.LoggerManager - Clicking Storage Type
+2026-06-30 15:20:27 INFO  utils.LoggerManager - Storage Type expanded
+2026-06-30 15:20:27 INFO  utils.LoggerManager - Selecting Open Storage
+2026-06-30 15:20:27 INFO  utils.LoggerManager - Open Storage selected successfully
+2026-06-30 15:20:27 INFO  utils.LoggerManager - Open Storage selected
+2026-06-30 15:20:27 INFO  utils.LoggerManager - Clicking Apply Filter button
+2026-06-30 15:20:27 INFO  utils.LoggerManager - Filters applied successfully
+2026-06-30 15:20:27 INFO  utils.LoggerManager - Filters applied
+2026-06-30 15:20:27 INFO  utils.LoggerManager - TC_03 Completed Successfully
+2026-06-30 15:20:30 INFO  utils.LoggerManager - ===== Test Finished =====
+2026-06-30 15:20:59 INFO  utils.LoggerManager - ===== Test Started =====
+2026-06-30 15:20:59 INFO  utils.LoggerManager - Initializing browser: chrome
+2026-06-30 15:21:02 INFO  utils.LoggerManager - Chrome browser launched
+2026-06-30 15:21:11 INFO  utils.LoggerManager - Navigated to: https://www.urbanladder.com/
+2026-06-30 15:21:11 INFO  utils.LoggerManager - Starting TC_01
+2026-06-30 15:21:11 INFO  utils.LoggerManager - Waiting for search box
+2026-06-30 15:21:11 INFO  utils.LoggerManager - Clicking search box
+2026-06-30 15:21:11 INFO  utils.LoggerManager - Typing Bookshelves
+2026-06-30 15:21:11 INFO  utils.LoggerManager - Pressing Enter
+2026-06-30 15:21:16 INFO  utils.LoggerManager - ===== Test Finished =====
+2026-06-30 15:21:16 INFO  utils.LoggerManager - ===== Test Started =====
+2026-06-30 15:21:16 INFO  utils.LoggerManager - Initializing browser: chrome
+2026-06-30 15:21:18 INFO  utils.LoggerManager - Chrome browser launched
+2026-06-30 15:21:26 INFO  utils.LoggerManager - Navigated to: https://www.urbanladder.com/
+2026-06-30 15:21:26 INFO  utils.LoggerManager - Starting TC_02 - Price Filter
+2026-06-30 15:21:26 INFO  utils.LoggerManager - Waiting for search box
+2026-06-30 15:21:26 INFO  utils.LoggerManager - Clicking search box
+2026-06-30 15:21:26 INFO  utils.LoggerManager - Typing Bookshelves
+2026-06-30 15:21:26 INFO  utils.LoggerManager - Pressing Enter
+2026-06-30 15:21:27 INFO  utils.LoggerManager - Clicking All Filters
+2026-06-30 15:21:27 INFO  utils.LoggerManager - All Filters opened
+2026-06-30 15:21:27 INFO  utils.LoggerManager - Scrolling to Price
+2026-06-30 15:21:27 INFO  utils.LoggerManager - Setting max price
+2026-06-30 15:21:27 INFO  utils.LoggerManager - Waiting for UI to update after entering price
+2026-06-30 15:21:27 INFO  utils.LoggerManager - Clicking Apply button
+2026-06-30 15:21:27 INFO  utils.LoggerManager - Price filter applied successfully
+2026-06-30 15:21:31 INFO  utils.LoggerManager - ===== Test Finished =====
+2026-06-30 15:21:31 INFO  utils.LoggerManager - ===== Test Started =====
+2026-06-30 15:21:31 INFO  utils.LoggerManager - Initializing browser: chrome
+2026-06-30 15:21:33 INFO  utils.LoggerManager - Chrome browser launched
+2026-06-30 15:21:44 INFO  utils.LoggerManager - Navigated to: https://www.urbanladder.com/
+2026-06-30 15:21:44 INFO  utils.LoggerManager - Starting TC_03 - Filter by Open Storage
+2026-06-30 15:21:44 INFO  utils.LoggerManager - Waiting for search box
+2026-06-30 15:21:44 INFO  utils.LoggerManager - Clicking search box
+2026-06-30 15:21:44 INFO  utils.LoggerManager - Typing Bookshelves
+2026-06-30 15:21:44 INFO  utils.LoggerManager - Pressing Enter
+2026-06-30 15:21:44 INFO  utils.LoggerManager - Bookshelves searched
+2026-06-30 15:21:44 INFO  utils.LoggerManager - Clicking All Filters button
+2026-06-30 15:21:45 INFO  utils.LoggerManager - Filters panel opened successfully
+2026-06-30 15:21:45 INFO  utils.LoggerManager - Filters opened
+2026-06-30 15:21:45 INFO  utils.LoggerManager - Scrolling inside All Filters panel
+2026-06-30 15:21:45 INFO  utils.LoggerManager - Clicking Storage Type
+2026-06-30 15:21:45 INFO  utils.LoggerManager - Storage Type expanded
+2026-06-30 15:21:45 INFO  utils.LoggerManager - Selecting Open Storage
+2026-06-30 15:21:45 INFO  utils.LoggerManager - Open Storage selected successfully
+2026-06-30 15:21:45 INFO  utils.LoggerManager - Open Storage selected
+2026-06-30 15:21:45 INFO  utils.LoggerManager - Clicking Apply Filter button
+2026-06-30 15:21:45 INFO  utils.LoggerManager - Filters applied successfully
+2026-06-30 15:21:45 INFO  utils.LoggerManager - Filters applied
+2026-06-30 15:21:45 INFO  utils.LoggerManager - TC_03 Completed Successfully
+2026-06-30 15:21:48 INFO  utils.LoggerManager - ===== Test Finished =====
+2026-06-30 15:21:48 INFO  utils.LoggerManager - ===== Test Started =====
+2026-06-30 15:21:48 INFO  utils.LoggerManager - Initializing browser: chrome
+2026-06-30 15:21:51 INFO  utils.LoggerManager - Chrome browser launched
+2026-06-30 15:22:09 INFO  utils.LoggerManager - Navigated to: https://www.urbanladder.com/
+2026-06-30 15:22:09 INFO  utils.LoggerManager - Starting TC_04
+2026-06-30 15:22:09 INFO  utils.LoggerManager - Waiting for search box
+2026-06-30 15:22:09 INFO  utils.LoggerManager - Clicking search box
+2026-06-30 15:22:10 INFO  utils.LoggerManager - Typing Bookshelves
+2026-06-30 15:22:10 INFO  utils.LoggerManager - Pressing Enter
+2026-06-30 15:22:10 INFO  utils.LoggerManager - Clicking All Filters
+2026-06-30 15:22:10 INFO  utils.LoggerManager - All Filters opened
+2026-06-30 15:22:10 INFO  utils.LoggerManager - Scrolling to Price
+2026-06-30 15:22:10 INFO  utils.LoggerManager - Setting max price
+2026-06-30 15:22:10 INFO  utils.LoggerManager - Waiting for UI to update after entering price
+2026-06-30 15:22:10 INFO  utils.LoggerManager - Clicking Apply button
+2026-06-30 15:22:11 INFO  utils.LoggerManager - Price filter applied successfully
+2026-06-30 15:22:11 INFO  utils.LoggerManager - Count text found: 366 Products
+2026-06-30 15:22:11 INFO  utils.LoggerManager - Number of Bookshelves below ₹15000 : 366
+2026-06-30 15:22:14 INFO  utils.LoggerManager - ===== Test Finished =====

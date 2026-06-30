@@ -2,13 +2,14 @@
 
 <suite name="UrbanLadderSuite">
 
-    <parameter name="browser" value="edge"/>
+    <parameter name="browser" value="chrome"/>
 
     <test name="Bookshelves Module">
         <classes>
             <class name="bookshelves.TC_01_BookshelvesSearchTest"/>
-            <class name="bookshelves.TC_02_FilterByPriceBelow15000Test"/>
-           <!-- <class name="bookshelves.TC_03_FilterByStorageTypeOpenTest"/>-->
+             <class name="bookshelves.TC_02_FilterByPriceBelow15000Test"/>
+             <class name="bookshelves.TC_03_FilterByStorageTypeOpenTest"/>
+            <class name="bookshelves.TC_04_GetNumberOfProductsUnder15000Test"/>
         </classes>
     </test>
 
