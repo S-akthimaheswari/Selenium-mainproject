@@ -1,4 +1,4 @@
 package bookshelves;
 
-public class TC_07_HandleSamePriceItemsTest {
+public class TC_07_VisibilityOfProductDescriptionTest {
 }

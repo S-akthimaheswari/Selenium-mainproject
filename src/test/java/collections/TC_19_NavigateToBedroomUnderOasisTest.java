@@ -1,4 +1,4 @@
 package collections;
 
-public class TC_19_DisplayMenuItemsTest {
+public class TC_19_NavigateToBedroomUnderOasisTest {
 }

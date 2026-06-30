@@ -1,4 +1,4 @@
 package bookshelves;
 
-public class TC_08_BookshelfNameAndPriceDisplayTest {
+public class TC_08_AddToCardFunctionalityTest {
 }

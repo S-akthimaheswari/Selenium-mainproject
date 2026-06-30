@@ -1,4 +1,4 @@
 package bookshelves;
 
-public class TC_04_ExcludeOutOfStockTest {
+public class TC_04_HandleSamePriceItemsTest {
 }

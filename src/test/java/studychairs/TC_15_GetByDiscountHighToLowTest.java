@@ -1,4 +1,4 @@
 package studychairs;
 
-public class TC_15_MouseHoverOnCollectionsTest {
+public class TC_15_GetByDiscountHighToLowTest {
 }

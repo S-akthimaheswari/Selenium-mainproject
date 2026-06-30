@@ -1,4 +1,4 @@
 package collections;
 
-public class TC_18_StoreMenuItemsInListTest {
+public class TC_18_DisplayMenuItemsTest {
 }

@@ -1,4 +1,4 @@
 package bookshelves;
 
-public class TC_06_DisplayFirstThreeBookshelvesTest {
+public class TC_06_NavigateToFirstProductTest {
 }

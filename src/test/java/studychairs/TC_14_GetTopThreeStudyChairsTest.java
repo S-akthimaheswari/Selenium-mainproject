@@ -1,4 +1,4 @@
 package studychairs;
 
-public class TC_14_StudyChairDetailsValidationTest {
+public class TC_14_GetTopThreeStudyChairsTest {
 }

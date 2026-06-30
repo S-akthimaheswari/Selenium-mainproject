@@ -1,4 +1,4 @@
 package studychairs;
 
-public class TC_13_GetTopThreeStudyChairsTest {
+public class TC_13_SortByHighestRecommendationTest {
 }
