@@ -3,6 +3,7 @@ package config;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 import utils.ConfigReader;
 import utils.LoggerManager;
@@ -23,12 +24,23 @@ public class DriverFactory {
 
         switch (browser.toLowerCase()) {
 
-            case "chrome":
+            /*case "chrome":
                 driver = new ChromeDriver();
                 LoggerManager.info("Chrome browser launched");
                 break;
 
             case "edge":
+                driver = new EdgeDriver();
+                LoggerManager.info("Edge browser launched");
+                break; */
+            case "chrome":
+                WebDriverManager.chromedriver().setup();   // ✅ ADD THIS
+                driver = new ChromeDriver();
+                LoggerManager.info("Chrome browser launched");
+                break;
+
+            case "edge":
+                WebDriverManager.edgedriver().setup();    // ✅ ADD THIS
                 driver = new EdgeDriver();
                 LoggerManager.info("Edge browser launched");
                 break;

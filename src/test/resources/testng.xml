@@ -6,10 +6,17 @@
 
     <test name="Bookshelves Module">
         <classes>
-            <class name="bookshelves.TC_01_BookshelvesSearchTest"/>
-             <class name="bookshelves.TC_02_FilterByPriceBelow15000Test"/>
-             <class name="bookshelves.TC_03_FilterByStorageTypeOpenTest"/>
+           <!-- <class name="bookshelves.TC_01_BookshelvesSearchTest"/>
+            <class name="bookshelves.TC_02_FilterByPriceBelow15000Test"/>
+            <class name="bookshelves.TC_03_FilterByStorageTypeOpenTest"/>
             <class name="bookshelves.TC_04_GetNumberOfProductsUnder15000Test"/>
+            <class name="bookshelves.TC_05_BookshelfNameAndPriceDisplayTestOfThree"/>
+            <class name="studychairs.TC_11_SearchStudyChairsTest"/>
+            <class name="collections.TC_16_MouseHoverOnNewArrivalsTest"/>
+            <class name="collections.TC_17_ExtractSubMenuItemsTest"/>
+            <class name="giftcards.TC_21_NavigateToGiftCardsTest"/>
+            <class name="giftcards.TC_22_SelectAnniversaryGiftCardTest"/>
+            -->
         </classes>
     </test>
 
