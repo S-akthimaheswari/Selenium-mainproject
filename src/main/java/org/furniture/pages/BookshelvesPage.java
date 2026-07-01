@@ -1,6 +1,7 @@
 package org.furniture.pages;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -54,6 +55,21 @@ public class BookshelvesPage {
     // Bookshelf prices
     @FindBy(xpath ="//div[@role='link']//div[contains(text(),'₹')]")
     java.util.List<WebElement> bookshelfPrices;
+
+    //First Bookshelf
+    @FindBy(xpath = "\"(//div[@role='link'])[1]\"")
+    WebElement firstBookshelf;
+
+    @FindBy(xpath = "(//div[@role='link'])[1]")
+    WebElement firstProductCard;
+
+    //Add to cart Button
+    @FindBy(css = "button[data-testid='pdp-add-to-cart-button']")
+    WebElement addToCartBtn;
+
+    //Cart Button
+    @FindBy(xpath = "//button[contains(text(),'Go to Cart')]")
+    WebElement goToCartBtn;
 
     public void searchBookshelves() {
         LoggerManager.info("Waiting for search box");
@@ -167,6 +183,21 @@ public class BookshelvesPage {
         );
     }
 
+    public List<Double> getFirstTwentyBookshelfPrices() {
+
+        wait.until(ExpectedConditions.visibilityOfAllElements(bookshelfPrices));
+
+        return bookshelfPrices.stream()
+                .filter(WebElement::isDisplayed)
+                .limit(20)
+                .map(WebElement::getText)
+                .map(price -> price.replace("₹", "")
+                        .replace(",", "")
+                        .trim())
+                .map(Double::parseDouble)
+                .collect(java.util.stream.Collectors.toList());
+    }
+
     public List<String> getTopThreeBookshelfNames() {
         wait.until(ExpectedConditions.visibilityOfAllElements(bookshelfNames));
         return bookshelfNames.stream()
@@ -181,5 +212,139 @@ public class BookshelvesPage {
                 .limit(3)
                 .map(WebElement::getText)
                 .collect(java.util.stream.Collectors.toList());
+    }
+
+    public String clickFirstProduct() {
+
+        WebElement product = wait.until(
+                ExpectedConditions.visibilityOfElementLocated(
+                        By.xpath("(//h2[contains(@class,'XxwSy')])[1]")
+                )
+        );
+        String productName = product.getText();
+        LoggerManager.info("Selected Product : " + productName);
+        ((JavascriptExecutor) driver)
+                .executeScript("arguments[0].click();", product);
+        return productName;
+    }
+
+    public void switchToProductTab() {
+
+        String parent = driver.getWindowHandle();
+
+        wait.until(driver ->
+                driver.getWindowHandles().size() > 1);
+
+        for (String handle : driver.getWindowHandles()) {
+
+            if (!handle.equals(parent)) {
+
+                driver.switchTo().window(handle);
+                break;
+            }
+        }
+
+        LoggerManager.info("Switched to Product tab");
+    }
+
+    public void addProductToCart() throws InterruptedException {
+
+        By addToCart = By.cssSelector(
+                "button[data-testid='pdp-add-to-cart-button']"
+        );
+
+        WebElement button =
+                wait.until(
+                        ExpectedConditions.presenceOfElementLocated(
+                                addToCart));
+
+        ((JavascriptExecutor) driver)
+                .executeScript(
+                        "arguments[0].scrollIntoView(true)",
+                        button);
+
+        Thread.sleep(2000);
+
+        ((JavascriptExecutor) driver)
+                .executeScript(
+                        "arguments[0].click();",
+                        button);
+
+        LoggerManager.info(
+                "Clicked Add To Cart");
+    }
+
+    public void openCart() {
+
+        By goToCart = By.xpath(
+                "//button[contains(text(),'Go to Cart')]");
+        wait.until(
+                ExpectedConditions.elementToBeClickable(goToCart)
+        ).click();
+        LoggerManager.info("Cart opened");
+    }
+
+    public boolean isProductPresentInCart(String productName) {
+
+        By cartItem = By.xpath("//*[contains(text(),\""
+                + productName +
+                        "\")]");
+        try {
+            wait.until(
+                    ExpectedConditions.visibilityOfElementLocated(cartItem));
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public void clickMoreProductDetails() {
+
+        Actions actions = new Actions(driver);
+
+        for (int i = 0; i < 10; i++) {
+
+            actions.sendKeys(Keys.PAGE_DOWN).perform();
+
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
+
+            List<WebElement> elements = driver.findElements(
+                    By.xpath("//button[contains(.,'More Product Details')]"));
+
+            if (!elements.isEmpty()) {
+
+                elements.get(0).click();
+
+                LoggerManager.info(
+                        "Clicked More Product Details");
+
+                return;
+            }
+        }
+
+        throw new NoSuchElementException(
+                "More Product Details not found");
+    }
+
+    public boolean isProductDescriptionVisible() {
+
+        try {
+
+            WebElement description = wait.until(
+                    ExpectedConditions.visibilityOfElementLocated(
+                            By.xpath("//*[contains(text(),'Product Details')]")
+                    )
+            );
+
+            return description.isDisplayed();
+
+        } catch (Exception e) {
+
+            return false;
+        }
     }
 }

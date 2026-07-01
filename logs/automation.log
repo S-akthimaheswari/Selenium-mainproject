@@ -1058,3 +1058,244 @@ Session ID: 43aab6f72df597b32b09898e62397064
 2026-07-01 11:53:27 INFO  utils.LoggerManager - Pressing Enter
 2026-07-01 11:53:27 INFO  utils.LoggerManager - Waiting for Study Chairs page
 2026-07-01 11:53:31 INFO  utils.LoggerManager - ===== Test Finished =====
+2026-07-01 16:26:27 INFO  utils.LoggerManager - ===== Test Started =====
+2026-07-01 16:26:27 INFO  utils.LoggerManager - Initializing browser: chrome
+2026-07-01 16:26:32 INFO  utils.LoggerManager - Chrome browser launched
+2026-07-01 16:26:48 INFO  utils.LoggerManager - Navigated to: https://www.urbanladder.com/
+2026-07-01 16:26:48 INFO  utils.LoggerManager - Starting TC_04 - Bookshelf Price Analytics
+2026-07-01 16:26:48 INFO  utils.LoggerManager - Waiting for search box
+2026-07-01 16:26:48 INFO  utils.LoggerManager - Clicking search box
+2026-07-01 16:26:48 INFO  utils.LoggerManager - Typing Bookshelves
+2026-07-01 16:26:48 INFO  utils.LoggerManager - Pressing Enter
+2026-07-01 16:26:49 INFO  utils.LoggerManager - Clicking All Filters
+2026-07-01 16:26:49 INFO  utils.LoggerManager - All Filters opened
+2026-07-01 16:26:49 INFO  utils.LoggerManager - Scrolling to Price
+2026-07-01 16:26:50 INFO  utils.LoggerManager - Setting max price
+2026-07-01 16:26:50 INFO  utils.LoggerManager - Waiting for UI to update after entering price
+2026-07-01 16:26:50 INFO  utils.LoggerManager - Clicking Apply button
+2026-07-01 16:26:50 INFO  utils.LoggerManager - Price filter applied successfully
+2026-07-01 16:26:51 INFO  utils.LoggerManager - Count text found: 396 Products
+2026-07-01 16:26:52 INFO  utils.LoggerManager - Total Products After Filter : 396
+2026-07-01 16:26:52 INFO  utils.LoggerManager - First 20 Products Analysis
+2026-07-01 16:26:52 INFO  utils.LoggerManager - Lowest Price : ₹1985.0
+2026-07-01 16:26:52 INFO  utils.LoggerManager - Highest Price : ₹15599.0
+2026-07-01 16:26:52 INFO  utils.LoggerManager - Average Price : ₹8169.10
+2026-07-01 16:26:56 INFO  utils.LoggerManager - ===== Test Finished =====
+2026-07-01 16:30:01 INFO  utils.LoggerManager - ===== Test Started =====
+2026-07-01 16:30:01 INFO  utils.LoggerManager - Initializing browser: chrome
+2026-07-01 16:30:03 INFO  utils.LoggerManager - Chrome browser launched
+2026-07-01 16:30:06 INFO  utils.LoggerManager - Navigated to: https://www.urbanladder.com/
+2026-07-01 16:30:06 INFO  utils.LoggerManager - Starting TC_04 - Bookshelf Price Analytics
+2026-07-01 16:30:06 INFO  utils.LoggerManager - Waiting for search box
+2026-07-01 16:30:06 INFO  utils.LoggerManager - Clicking search box
+2026-07-01 16:30:06 INFO  utils.LoggerManager - Typing Bookshelves
+2026-07-01 16:30:06 INFO  utils.LoggerManager - Pressing Enter
+2026-07-01 16:30:07 INFO  utils.LoggerManager - Clicking All Filters
+2026-07-01 16:30:08 INFO  utils.LoggerManager - All Filters opened
+2026-07-01 16:30:08 INFO  utils.LoggerManager - Scrolling to Price
+2026-07-01 16:30:08 INFO  utils.LoggerManager - Setting max price
+2026-07-01 16:30:08 INFO  utils.LoggerManager - Waiting for UI to update after entering price
+2026-07-01 16:30:08 INFO  utils.LoggerManager - Clicking Apply button
+2026-07-01 16:30:08 INFO  utils.LoggerManager - Price filter applied successfully
+2026-07-01 16:30:08 INFO  utils.LoggerManager - Count text found: 396 Products
+2026-07-01 16:30:09 INFO  utils.LoggerManager - Total Products After Filter : 396
+2026-07-01 16:30:09 INFO  utils.LoggerManager - First 20 Products Analysis
+2026-07-01 16:30:09 INFO  utils.LoggerManager - Lowest Price : ₹1985.0
+2026-07-01 16:30:09 INFO  utils.LoggerManager - Highest Price : ₹15599.0
+2026-07-01 16:30:09 INFO  utils.LoggerManager - Average Price : ₹8169.10
+2026-07-01 16:30:13 INFO  utils.LoggerManager - ===== Test Finished =====
+2026-07-01 16:46:30 INFO  utils.LoggerManager - ===== Test Started =====
+2026-07-01 16:46:30 INFO  utils.LoggerManager - Initializing browser: chrome
+2026-07-01 16:46:32 INFO  utils.LoggerManager - Chrome browser launched
+2026-07-01 16:46:35 INFO  utils.LoggerManager - Navigated to: https://www.urbanladder.com/
+2026-07-01 16:46:35 INFO  utils.LoggerManager - Starting TC_08
+2026-07-01 16:46:35 INFO  utils.LoggerManager - Waiting for search box
+2026-07-01 16:46:35 INFO  utils.LoggerManager - Clicking search box
+2026-07-01 16:46:35 INFO  utils.LoggerManager - Typing Bookshelves
+2026-07-01 16:46:35 INFO  utils.LoggerManager - Pressing Enter
+2026-07-01 16:46:37 INFO  utils.LoggerManager - Selected Product : Alberto Solid Wood Bookshelf in Teak Finish
+2026-07-01 16:46:37 INFO  utils.LoggerManager - Product Selected : Alberto Solid Wood Bookshelf in Teak Finish
+2026-07-01 16:46:37 INFO  utils.LoggerManager - Switched to Product tab
+2026-07-01 16:47:10 INFO  utils.LoggerManager - ===== Test Finished =====
+2026-07-01 16:50:39 INFO  utils.LoggerManager - ===== Test Started =====
+2026-07-01 16:50:39 INFO  utils.LoggerManager - Initializing browser: chrome
+2026-07-01 16:50:41 INFO  utils.LoggerManager - Chrome browser launched
+2026-07-01 16:50:44 INFO  utils.LoggerManager - Navigated to: https://www.urbanladder.com/
+2026-07-01 16:50:44 INFO  utils.LoggerManager - Starting TC_08
+2026-07-01 16:50:44 INFO  utils.LoggerManager - Waiting for search box
+2026-07-01 16:50:44 INFO  utils.LoggerManager - Clicking search box
+2026-07-01 16:50:44 INFO  utils.LoggerManager - Typing Bookshelves
+2026-07-01 16:50:44 INFO  utils.LoggerManager - Pressing Enter
+2026-07-01 16:50:48 INFO  utils.LoggerManager - ===== Test Finished =====
+2026-07-01 16:53:15 INFO  utils.LoggerManager - ===== Test Started =====
+2026-07-01 16:53:15 INFO  utils.LoggerManager - Initializing browser: chrome
+2026-07-01 16:53:18 INFO  utils.LoggerManager - Chrome browser launched
+2026-07-01 16:53:20 INFO  utils.LoggerManager - Navigated to: https://www.urbanladder.com/
+2026-07-01 16:53:20 INFO  utils.LoggerManager - Starting TC_08
+2026-07-01 16:53:20 INFO  utils.LoggerManager - Waiting for search box
+2026-07-01 16:53:21 INFO  utils.LoggerManager - Clicking search box
+2026-07-01 16:53:21 INFO  utils.LoggerManager - Typing Bookshelves
+2026-07-01 16:53:21 INFO  utils.LoggerManager - Pressing Enter
+2026-07-01 16:53:22 INFO  utils.LoggerManager - Selected Product : Alberto Solid Wood Bookshelf in Teak Finish
+2026-07-01 16:53:23 INFO  utils.LoggerManager - Product Selected : Alberto Solid Wood Bookshelf in Teak Finish
+2026-07-01 16:53:56 INFO  utils.LoggerManager - ===== Test Finished =====
+2026-07-01 16:54:57 INFO  utils.LoggerManager - ===== Test Started =====
+2026-07-01 16:54:57 INFO  utils.LoggerManager - Initializing browser: chrome
+2026-07-01 16:55:00 INFO  utils.LoggerManager - Chrome browser launched
+2026-07-01 16:55:04 INFO  utils.LoggerManager - Navigated to: https://www.urbanladder.com/
+2026-07-01 16:55:04 INFO  utils.LoggerManager - Starting TC_08
+2026-07-01 16:55:04 INFO  utils.LoggerManager - Waiting for search box
+2026-07-01 16:55:04 INFO  utils.LoggerManager - Clicking search box
+2026-07-01 16:55:04 INFO  utils.LoggerManager - Typing Bookshelves
+2026-07-01 16:55:05 INFO  utils.LoggerManager - Pressing Enter
+2026-07-01 16:55:05 INFO  utils.LoggerManager - Selected Product : Alberto Solid Wood Bookshelf in Teak Finish
+2026-07-01 16:55:05 INFO  utils.LoggerManager - Product Selected : Alberto Solid Wood Bookshelf in Teak Finish
+2026-07-01 16:55:05 INFO  utils.LoggerManager - Switched to Product tab
+2026-07-01 16:55:39 INFO  utils.LoggerManager - ===== Test Finished =====
+2026-07-01 16:56:32 INFO  utils.LoggerManager - ===== Test Started =====
+2026-07-01 16:56:32 INFO  utils.LoggerManager - Initializing browser: chrome
+2026-07-01 16:56:34 INFO  utils.LoggerManager - Chrome browser launched
+2026-07-01 16:56:36 INFO  utils.LoggerManager - Navigated to: https://www.urbanladder.com/
+2026-07-01 16:56:36 INFO  utils.LoggerManager - Starting TC_08
+2026-07-01 16:56:36 INFO  utils.LoggerManager - Waiting for search box
+2026-07-01 16:56:36 INFO  utils.LoggerManager - Clicking search box
+2026-07-01 16:56:37 INFO  utils.LoggerManager - Typing Bookshelves
+2026-07-01 16:56:37 INFO  utils.LoggerManager - Pressing Enter
+2026-07-01 16:56:38 INFO  utils.LoggerManager - Selected Product : Alberto Solid Wood Bookshelf in Teak Finish
+2026-07-01 16:56:38 INFO  utils.LoggerManager - Product Selected : Alberto Solid Wood Bookshelf in Teak Finish
+2026-07-01 16:56:38 INFO  utils.LoggerManager - Switched to Product tab
+2026-07-01 16:57:12 INFO  utils.LoggerManager - ===== Test Finished =====
+2026-07-01 17:00:45 INFO  utils.LoggerManager - ===== Test Started =====
+2026-07-01 17:00:45 INFO  utils.LoggerManager - Initializing browser: chrome
+2026-07-01 17:00:47 INFO  utils.LoggerManager - Chrome browser launched
+2026-07-01 17:00:59 INFO  utils.LoggerManager - Navigated to: https://www.urbanladder.com/
+2026-07-01 17:00:59 INFO  utils.LoggerManager - Starting TC_06
+2026-07-01 17:00:59 INFO  utils.LoggerManager - Waiting for search box
+2026-07-01 17:01:00 INFO  utils.LoggerManager - Clicking search box
+2026-07-01 17:01:00 INFO  utils.LoggerManager - Typing Bookshelves
+2026-07-01 17:01:00 INFO  utils.LoggerManager - Pressing Enter
+2026-07-01 17:01:00 INFO  utils.LoggerManager - Selected Product : Alberto Solid Wood Bookshelf in Teak Finish
+2026-07-01 17:01:00 INFO  utils.LoggerManager - Selected Product : Alberto Solid Wood Bookshelf in Teak Finish
+2026-07-01 17:01:00 INFO  utils.LoggerManager - Switched to Product tab
+2026-07-01 17:01:33 INFO  utils.LoggerManager - ===== Test Finished =====
+2026-07-01 17:03:34 INFO  utils.LoggerManager - ===== Test Started =====
+2026-07-01 17:03:34 INFO  utils.LoggerManager - Initializing browser: chrome
+2026-07-01 17:03:36 INFO  utils.LoggerManager - Chrome browser launched
+2026-07-01 17:03:41 INFO  utils.LoggerManager - Navigated to: https://www.urbanladder.com/
+2026-07-01 17:03:41 INFO  utils.LoggerManager - Starting TC_06
+2026-07-01 17:03:41 INFO  utils.LoggerManager - Waiting for search box
+2026-07-01 17:03:41 INFO  utils.LoggerManager - Clicking search box
+2026-07-01 17:03:41 INFO  utils.LoggerManager - Typing Bookshelves
+2026-07-01 17:03:41 INFO  utils.LoggerManager - Pressing Enter
+2026-07-01 17:03:41 INFO  utils.LoggerManager - Selected Product : Alberto Solid Wood Bookshelf in Teak Finish
+2026-07-01 17:03:41 INFO  utils.LoggerManager - Switched to Product tab
+2026-07-01 17:04:15 INFO  utils.LoggerManager - ===== Test Finished =====
+2026-07-01 17:05:48 INFO  utils.LoggerManager - ===== Test Started =====
+2026-07-01 17:05:48 INFO  utils.LoggerManager - Initializing browser: chrome
+2026-07-01 17:05:50 INFO  utils.LoggerManager - Chrome browser launched
+2026-07-01 17:05:54 INFO  utils.LoggerManager - Navigated to: https://www.urbanladder.com/
+2026-07-01 17:05:54 INFO  utils.LoggerManager - Starting TC_06
+2026-07-01 17:05:54 INFO  utils.LoggerManager - Waiting for search box
+2026-07-01 17:05:54 INFO  utils.LoggerManager - Clicking search box
+2026-07-01 17:05:54 INFO  utils.LoggerManager - Typing Bookshelves
+2026-07-01 17:05:55 INFO  utils.LoggerManager - Pressing Enter
+2026-07-01 17:05:56 INFO  utils.LoggerManager - Selected Product : Alberto Solid Wood Bookshelf in Teak Finish
+2026-07-01 17:05:56 INFO  utils.LoggerManager - Switched to Product tab
+2026-07-01 17:06:29 INFO  utils.LoggerManager - ===== Test Finished =====
+2026-07-01 17:08:02 INFO  utils.LoggerManager - ===== Test Started =====
+2026-07-01 17:08:02 INFO  utils.LoggerManager - Initializing browser: chrome
+2026-07-01 17:08:04 INFO  utils.LoggerManager - Chrome browser launched
+2026-07-01 17:08:07 INFO  utils.LoggerManager - Navigated to: https://www.urbanladder.com/
+2026-07-01 17:08:07 INFO  utils.LoggerManager - Starting TC_06
+2026-07-01 17:08:07 INFO  utils.LoggerManager - Waiting for search box
+2026-07-01 17:08:07 INFO  utils.LoggerManager - Clicking search box
+2026-07-01 17:08:07 INFO  utils.LoggerManager - Typing Bookshelves
+2026-07-01 17:08:07 INFO  utils.LoggerManager - Pressing Enter
+2026-07-01 17:08:08 INFO  utils.LoggerManager - Selected Product : Alberto Solid Wood Bookshelf in Teak Finish
+2026-07-01 17:08:08 INFO  utils.LoggerManager - Switched to Product tab
+2026-07-01 17:08:08 INFO  utils.LoggerManager - Successfully navigated to first product
+2026-07-01 17:08:11 INFO  utils.LoggerManager - ===== Test Finished =====
+2026-07-01 17:14:22 INFO  utils.LoggerManager - ===== Test Started =====
+2026-07-01 17:14:22 INFO  utils.LoggerManager - Initializing browser: chrome
+2026-07-01 17:14:23 INFO  utils.LoggerManager - Chrome browser launched
+2026-07-01 17:14:26 INFO  utils.LoggerManager - Navigated to: https://www.urbanladder.com/
+2026-07-01 17:14:26 INFO  utils.LoggerManager - Starting TC_07
+2026-07-01 17:14:26 INFO  utils.LoggerManager - Waiting for search box
+2026-07-01 17:14:26 INFO  utils.LoggerManager - Clicking search box
+2026-07-01 17:14:26 INFO  utils.LoggerManager - Typing Bookshelves
+2026-07-01 17:14:27 INFO  utils.LoggerManager - Pressing Enter
+2026-07-01 17:14:27 INFO  utils.LoggerManager - Selected Product : Alberto Solid Wood Bookshelf in Teak Finish
+2026-07-01 17:14:27 INFO  utils.LoggerManager - Switched to Product tab
+2026-07-01 17:15:01 INFO  utils.LoggerManager - ===== Test Finished =====
+2026-07-01 17:16:50 INFO  utils.LoggerManager - ===== Test Started =====
+2026-07-01 17:16:50 INFO  utils.LoggerManager - Initializing browser: chrome
+2026-07-01 17:16:52 INFO  utils.LoggerManager - Chrome browser launched
+2026-07-01 17:17:06 INFO  utils.LoggerManager - Navigated to: https://www.urbanladder.com/
+2026-07-01 17:17:06 INFO  utils.LoggerManager - Starting TC_07
+2026-07-01 17:17:06 INFO  utils.LoggerManager - Waiting for search box
+2026-07-01 17:17:06 INFO  utils.LoggerManager - Clicking search box
+2026-07-01 17:17:06 INFO  utils.LoggerManager - Typing Bookshelves
+2026-07-01 17:17:06 INFO  utils.LoggerManager - Pressing Enter
+2026-07-01 17:17:07 INFO  utils.LoggerManager - Selected Product : Alberto Solid Wood Bookshelf in Teak Finish
+2026-07-01 17:17:07 INFO  utils.LoggerManager - Switched to Product tab
+2026-07-01 17:17:41 INFO  utils.LoggerManager - ===== Test Finished =====
+2026-07-01 17:28:43 INFO  utils.LoggerManager - ===== Test Started =====
+2026-07-01 17:28:43 INFO  utils.LoggerManager - Initializing browser: chrome
+2026-07-01 17:28:50 INFO  utils.LoggerManager - Chrome browser launched
+2026-07-01 17:29:00 INFO  utils.LoggerManager - Navigated to: https://www.urbanladder.com/
+2026-07-01 17:29:00 INFO  utils.LoggerManager - Starting TC_07
+2026-07-01 17:29:00 INFO  utils.LoggerManager - Waiting for search box
+2026-07-01 17:29:00 INFO  utils.LoggerManager - Clicking search box
+2026-07-01 17:29:00 INFO  utils.LoggerManager - Typing Bookshelves
+2026-07-01 17:29:00 INFO  utils.LoggerManager - Pressing Enter
+2026-07-01 17:29:01 INFO  utils.LoggerManager - Selected Product : Alberto Solid Wood Bookshelf in Teak Finish
+2026-07-01 17:29:01 INFO  utils.LoggerManager - Switched to Product tab
+2026-07-01 17:29:34 INFO  utils.LoggerManager - ===== Test Finished =====
+2026-07-01 17:32:01 INFO  utils.LoggerManager - ===== Test Started =====
+2026-07-01 17:32:01 INFO  utils.LoggerManager - Initializing browser: chrome
+2026-07-01 17:32:03 INFO  utils.LoggerManager - Chrome browser launched
+2026-07-01 17:32:17 INFO  utils.LoggerManager - Navigated to: https://www.urbanladder.com/
+2026-07-01 17:32:17 INFO  utils.LoggerManager - Starting TC_07
+2026-07-01 17:32:17 INFO  utils.LoggerManager - Waiting for search box
+2026-07-01 17:32:17 INFO  utils.LoggerManager - Clicking search box
+2026-07-01 17:32:17 INFO  utils.LoggerManager - Typing Bookshelves
+2026-07-01 17:32:17 INFO  utils.LoggerManager - Pressing Enter
+2026-07-01 17:32:18 INFO  utils.LoggerManager - Selected Product : Alberto Solid Wood Bookshelf in Teak Finish
+2026-07-01 17:32:18 INFO  utils.LoggerManager - Switched to Product tab
+2026-07-01 17:32:51 INFO  utils.LoggerManager - ===== Test Finished =====
+2026-07-01 17:36:39 INFO  utils.LoggerManager - ===== Test Started =====
+2026-07-01 17:36:39 INFO  utils.LoggerManager - Initializing browser: chrome
+2026-07-01 17:36:41 INFO  utils.LoggerManager - Chrome browser launched
+2026-07-01 17:36:51 INFO  utils.LoggerManager - Navigated to: https://www.urbanladder.com/
+2026-07-01 17:36:51 INFO  utils.LoggerManager - Starting TC_07
+2026-07-01 17:36:51 INFO  utils.LoggerManager - Waiting for search box
+2026-07-01 17:36:51 INFO  utils.LoggerManager - Clicking search box
+2026-07-01 17:36:51 INFO  utils.LoggerManager - Typing Bookshelves
+2026-07-01 17:36:51 INFO  utils.LoggerManager - Pressing Enter
+2026-07-01 17:36:52 INFO  utils.LoggerManager - Selected Product : Alberto Solid Wood Bookshelf in Teak Finish
+2026-07-01 17:36:52 INFO  utils.LoggerManager - Switched to Product tab
+2026-07-01 17:37:25 INFO  utils.LoggerManager - ===== Test Finished =====
+2026-07-01 17:39:22 INFO  utils.LoggerManager - ===== Test Started =====
+2026-07-01 17:39:22 INFO  utils.LoggerManager - Initializing browser: chrome
+2026-07-01 17:39:23 INFO  utils.LoggerManager - Chrome browser launched
+2026-07-01 17:39:34 INFO  utils.LoggerManager - Navigated to: https://www.urbanladder.com/
+2026-07-01 17:39:34 INFO  utils.LoggerManager - Starting TC_07
+2026-07-01 17:39:34 INFO  utils.LoggerManager - Waiting for search box
+2026-07-01 17:39:35 INFO  utils.LoggerManager - Clicking search box
+2026-07-01 17:39:35 INFO  utils.LoggerManager - Typing Bookshelves
+2026-07-01 17:39:35 INFO  utils.LoggerManager - Pressing Enter
+2026-07-01 17:39:35 INFO  utils.LoggerManager - Selected Product : Alberto Solid Wood Bookshelf in Teak Finish
+2026-07-01 17:39:35 INFO  utils.LoggerManager - Switched to Product tab
+2026-07-01 17:40:14 INFO  utils.LoggerManager - ===== Test Finished =====
+2026-07-01 17:41:41 INFO  utils.LoggerManager - ===== Test Started =====
+2026-07-01 17:41:41 INFO  utils.LoggerManager - Initializing browser: chrome
+2026-07-01 17:41:43 INFO  utils.LoggerManager - Chrome browser launched
+2026-07-01 17:41:53 INFO  utils.LoggerManager - Navigated to: https://www.urbanladder.com/
+2026-07-01 17:41:53 INFO  utils.LoggerManager - Starting TC_07
+2026-07-01 17:41:53 INFO  utils.LoggerManager - Waiting for search box
+2026-07-01 17:41:53 INFO  utils.LoggerManager - Clicking search box
+2026-07-01 17:41:53 INFO  utils.LoggerManager - Typing Bookshelves
+2026-07-01 17:41:53 INFO  utils.LoggerManager - Pressing Enter
+2026-07-01 17:41:53 INFO  utils.LoggerManager - Selected Product : Alberto Solid Wood Bookshelf in Teak Finish
+2026-07-01 17:41:54 INFO  utils.LoggerManager - Switched to Product tab
+2026-07-01 17:42:37 INFO  utils.LoggerManager - ===== Test Finished =====

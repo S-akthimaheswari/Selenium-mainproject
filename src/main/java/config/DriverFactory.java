@@ -23,16 +23,6 @@ public class DriverFactory {
         LoggerManager.info("Initializing browser: " + browser);
 
         switch (browser.toLowerCase()) {
-
-            /*case "chrome":
-                driver = new ChromeDriver();
-                LoggerManager.info("Chrome browser launched");
-                break;
-
-            case "edge":
-                driver = new EdgeDriver();
-                LoggerManager.info("Edge browser launched");
-                break; */
             case "chrome":
                 WebDriverManager.chromedriver().setup();   // ✅ ADD THIS
                 driver = new ChromeDriver();
