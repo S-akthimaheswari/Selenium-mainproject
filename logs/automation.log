@@ -1299,3 +1299,14 @@ Session ID: 43aab6f72df597b32b09898e62397064
 2026-07-01 17:41:53 INFO  utils.LoggerManager - Selected Product : Alberto Solid Wood Bookshelf in Teak Finish
 2026-07-01 17:41:54 INFO  utils.LoggerManager - Switched to Product tab
 2026-07-01 17:42:37 INFO  utils.LoggerManager - ===== Test Finished =====
+2026-07-02 09:56:13 INFO  utils.LoggerManager - ===== Test Started =====
+2026-07-02 09:56:13 INFO  utils.LoggerManager - Initializing browser: chrome
+2026-07-02 09:56:17 INFO  utils.LoggerManager - Chrome browser launched
+2026-07-02 09:56:46 INFO  utils.LoggerManager - Navigated to: https://www.urbanladder.com/
+2026-07-02 09:56:46 INFO  utils.LoggerManager - Starting TC_11
+2026-07-02 09:56:46 INFO  utils.LoggerManager - Waiting for search box
+2026-07-02 09:56:46 INFO  utils.LoggerManager - Clicking search box
+2026-07-02 09:56:46 INFO  utils.LoggerManager - Typing Study Chairs
+2026-07-02 09:56:46 INFO  utils.LoggerManager - Pressing Enter
+2026-07-02 09:56:46 INFO  utils.LoggerManager - Waiting for Study Chairs page
+2026-07-02 09:56:51 INFO  utils.LoggerManager - ===== Test Finished =====
