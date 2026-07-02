@@ -4,6 +4,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.*;
 import utils.LoggerManager;
+import utils.PopupHandler;
+
 import java.time.Duration;
 
 public class GiftCardsPage {
@@ -47,11 +49,13 @@ public class GiftCardsPage {
 // Navigation
 
     public void clickGiftCards() {
+        PopupHandler.closePopupIfPresent(driver);
         LoggerManager.info("Clicking Gift Cards link");
         wait.until(ExpectedConditions.elementToBeClickable(giftCardsLink)).click();
     }
 
     public void switchToGiftCardWindow() {
+        PopupHandler.closePopupIfPresent(driver);
         String parentWindow = driver.getWindowHandle();
         wait.until(ExpectedConditions.numberOfWindowsToBe(2));
         for (String window : driver.getWindowHandles()) {
@@ -113,6 +117,7 @@ public class GiftCardsPage {
                                  String receiverEmailVal,
                                  String message) {
 
+        PopupHandler.closePopupIfPresent(driver);
         LoggerManager.info("Filling Gift Card form");
 
         WebElement amt = wait.until(

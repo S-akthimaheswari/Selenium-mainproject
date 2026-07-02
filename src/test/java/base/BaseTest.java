@@ -7,6 +7,8 @@ import org.testng.annotations.*;
 import utils.ConfigReader;
 import utils.ExtentReportManager;
 import utils.LoggerManager;
+import utils.PopupHandler;
+
 import java.lang.reflect.Method;
 
 public class BaseTest {
@@ -26,6 +28,7 @@ public class BaseTest {
         String url = ConfigReader.getProperty("url");
         driver.get(url);
         LoggerManager.info("Navigated to: " + url);
+        PopupHandler.closePopupIfPresent(driver);
     }
 
     @AfterMethod

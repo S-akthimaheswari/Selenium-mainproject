@@ -6,6 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import utils.ExtentReportManager;
 import utils.LoggerManager;
+import utils.PopupHandler;
 
 public class TC_01_BookshelvesSearchTest extends BaseTest {
 
@@ -15,6 +16,7 @@ public class TC_01_BookshelvesSearchTest extends BaseTest {
         LoggerManager.info("Starting TC_01");
         ExtentReportManager.getTest().info("Launching Bookshelves search test");
         BookshelvesPage page = new BookshelvesPage(driver);
+        PopupHandler.closePopupIfPresent(driver);
         page.searchBookshelves();
         ExtentReportManager.getTest().info("Search action performed");
         boolean result = page.isBookshelvesPageDisplayed();

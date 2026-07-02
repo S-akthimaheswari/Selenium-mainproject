@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import utils.LoggerManager;
 import utils.ExtentReportManager;
+import utils.PopupHandler;
 
 import java.time.Duration;
 import java.util.ArrayList;
@@ -37,6 +38,7 @@ public class HomePage {
 
     // Hover on New Arrivals
     public void hoverOnNewArrivals() {
+        PopupHandler.closePopupIfPresent(driver);
         LoggerManager.info("Waiting for New Arrivals menu");
         wait.until(ExpectedConditions.visibilityOf(newArrivalsMenu));
         LoggerManager.info("Hovering on New Arrivals menu");
@@ -51,6 +53,7 @@ public class HomePage {
 
     // Check dropdown is displayed
     public boolean isNewArrivalsDropdownDisplayed() {
+        PopupHandler.closePopupIfPresent(driver);
         LoggerManager.info("Validating New Arrivals dropdown visibility");
         ExtentReportManager.getTest().info("Checking dropdown visibility");
         wait.until(ExpectedConditions.visibilityOf(newArrivalsDropdown));
@@ -81,6 +84,7 @@ public class HomePage {
 
     // Click Terra Bedroom
     public void clickTerraBedroom() {
+        PopupHandler.closePopupIfPresent(driver);
         LoggerManager.info("Waiting for Terra Bedroom option");
         wait.until(ExpectedConditions.visibilityOf(terraBedroom));
         LoggerManager.info("Clicking Terra Collection -> Bedroom");
@@ -90,6 +94,7 @@ public class HomePage {
 
     // Validate Terra Bedroom page navigation
     public boolean isTerraBedroomPageDisplayed() {
+        PopupHandler.closePopupIfPresent(driver);
         LoggerManager.info("Validating navigation to Terra Bedroom page");
         wait.until(ExpectedConditions.urlContains("terra-bedroom-collection"));
         String currentUrl = driver.getCurrentUrl();

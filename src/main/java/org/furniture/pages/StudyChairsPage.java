@@ -10,6 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import utils.LoggerManager;
+import utils.PopupHandler;
 
 public class StudyChairsPage {
 
@@ -31,6 +32,7 @@ public class StudyChairsPage {
 
     // Search for Study Chairs
     public void searchStudyChairs() {
+        PopupHandler.closePopupIfPresent(driver);
         LoggerManager.info("Waiting for search box");
         wait.until(ExpectedConditions.visibilityOf(searchBox));
         LoggerManager.info("Clicking search box");
