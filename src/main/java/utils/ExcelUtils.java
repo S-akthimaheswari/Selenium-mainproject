@@ -130,4 +130,51 @@ public class ExcelUtils {
         }
         workbook.close();
     }
+
+    public static void writeProductImageUrl(String imageUrl) {
+        try {
+            XSSFWorkbook workbook = getWorkbook();
+            Sheet sheet = workbook.getSheet("Bookshelves");
+            int rowNum = sheet.getLastRowNum() + 3;
+            Row titleRow = sheet.createRow(rowNum++);
+            titleRow.createCell(0).setCellValue("TC_10 - Product Image URL");
+            Row headerRow = sheet.createRow(rowNum++);
+            headerRow.createCell(0).setCellValue("Image URL");
+            Row dataRow = sheet.createRow(rowNum);
+            dataRow.createCell(0).setCellValue(imageUrl);
+            saveWorkbook(workbook);
+            LoggerManager.info("Product Image URL written successfully");
+        } catch (Exception e) {
+            LoggerManager.error("Excel writing failed : " + e.getMessage());
+        }
+    }
+    public static void writeTopThreeStudyChairs(List<String> products) {
+
+        try {
+            XSSFWorkbook workbook = getWorkbook();
+            Sheet sheet = workbook.getSheet("Study Chairs");
+            if (sheet == null) {
+                sheet = workbook.createSheet("Study Chairs");
+            }
+            int rowNum = sheet.getLastRowNum();
+            if (rowNum == 0 && sheet.getRow(0) == null) {
+                Row header = sheet.createRow(0);
+                header.createCell(0).setCellValue("S.No");
+                header.createCell(1).setCellValue("Product Name");
+                rowNum = 1;
+            }
+            else {
+                rowNum++;
+            }
+            for (int i = 0; i < products.size(); i++) {
+                Row row = sheet.createRow(rowNum++);
+                row.createCell(0).setCellValue(i + 1);
+                row.createCell(1).setCellValue(products.get(i));
+            }
+            saveWorkbook(workbook);
+            LoggerManager.info("Top 3 Study Chairs written successfully");
+        } catch (Exception e) {
+            LoggerManager.error("Excel writing failed : " + e.getMessage());
+        }
+    }
 }

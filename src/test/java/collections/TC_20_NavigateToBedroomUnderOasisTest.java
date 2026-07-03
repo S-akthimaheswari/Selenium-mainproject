@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import utils.ExtentReportManager;
 import utils.LoggerManager;
 
-public class TC_19_NavigateToBedroomUnderOasisTest extends BaseTest{
+public class TC_20_NavigateToBedroomUnderOasisTest extends BaseTest{
     @Test
     public void verifyTerraBedroomNavigation() {
 

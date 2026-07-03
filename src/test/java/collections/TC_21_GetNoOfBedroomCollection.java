@@ -9,18 +9,16 @@ import org.testng.annotations.Test;
 import utils.ExtentReportManager;
 import utils.LoggerManager;
 
-public class TC_20_GetNoOfBedroomCollection extends BaseTest {
+public class TC_21_GetNoOfBedroomCollection extends BaseTest {
     @Test
     public void verifyFiltersProductValidation() {
         LoggerManager.info("Starting TC - Filters Product Validation");
         ExtentReportManager.getTest().info("Test started");
         HomePage homePage = new HomePage(driver);
         homePage.hoverOnNewArrivals();
-        Assert.assertTrue(homePage.isNewArrivalsDropdownDisplayed(),
-                "New Arrivals dropdown not displayed");
+        Assert.assertTrue(homePage.isNewArrivalsDropdownDisplayed(), "New Arrivals dropdown not displayed");
         homePage.clickTerraBedroom();
-        Assert.assertTrue(homePage.isTerraBedroomPageDisplayed(),
-                "Terra Bedroom page not displayed");
+        Assert.assertTrue(homePage.isTerraBedroomPageDisplayed(), "Terra Bedroom page not displayed");
         TerraBedroomPage page = new TerraBedroomPage(driver);
         page.applyFiltersUsingAllFilters();
         int productCount = page.getProductListSize();

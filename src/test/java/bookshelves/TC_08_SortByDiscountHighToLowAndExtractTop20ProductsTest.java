@@ -22,11 +22,9 @@ public class TC_08_SortByDiscountHighToLowAndExtractTop20ProductsTest
         ExtentReportManager.getTest().info("Sorting by Discount High To Low");
         page.sortByDiscountHighToLow();
         page.loadTwentyProducts();
-        List<String[]> productData =
-                page.getTopTwentyProductsWithDiscounts();
+        List<String[]> productData = page.getTopTwentyProductsWithDiscounts();
         LoggerManager.info("Total products extracted : " + productData.size());
         ExcelUtils.writeDiscountData(productData);
-        ExtentReportManager.getTest()
-                .pass("Top 20 products and discounts exported to Excel");
+        ExtentReportManager.getTest().pass("Top 20 products and discounts exported to Excel");
     }
 }

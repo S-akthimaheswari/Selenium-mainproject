@@ -66,6 +66,18 @@ public class BookshelvesPage {
     @FindBy(xpath = "//div[@role='link']")
     List<WebElement> productCards;
 
+    @FindBy(xpath = "//*[contains(text(),'Bookshelves')]")
+    WebElement bookshelvesCategory;
+
+    @FindBy(xpath = "(//div[@role='link']//img)[1]")
+    WebElement firstProductImage;
+
+    @FindBy(xpath = "(//h2[contains(@class,'XxwSy')])[1]")
+    WebElement firstProduct;
+
+    @FindBy(css = "span.PpQnM")
+    WebElement productsCount;
+
     public void searchBookshelves() {
         PopupHandler.closePopupIfPresent(driver);
         LoggerManager.info("Waiting for search box");
@@ -134,23 +146,18 @@ public class BookshelvesPage {
     public void selectOpenStorage() {
         LoggerManager.info("Scrolling inside All Filters panel");
         ((JavascriptExecutor) driver).executeScript(
-                "document.querySelector(\"div[role='dialog']\").scrollTop=300"
-        );
+                "document.querySelector(\"div[role='dialog']\").scrollTop=300");
         LoggerManager.info("Clicking Storage Type");
         WebElement storageType = wait.until(
                 ExpectedConditions.elementToBeClickable(
-                        By.xpath("(//span[text()='Storage Type'])[2]")
-                )
-        );
+                        By.xpath("(//span[text()='Storage Type'])[2]")));
         ((JavascriptExecutor) driver)
                 .executeScript("arguments[0].click();", storageType);
         LoggerManager.info("Storage Type expanded");
         LoggerManager.info("Selecting Open Storage");
         WebElement openStorage = wait.until(
                 ExpectedConditions.elementToBeClickable(
-                        By.xpath("//div[contains(text(),'Open Storage')]")
-                )
-        );
+                        By.xpath("//div[contains(text(),'Open Storage')]")));
         ((JavascriptExecutor) driver)
                 .executeScript("arguments[0].click();", openStorage);
         LoggerManager.info("Open Storage selected successfully");
@@ -160,9 +167,7 @@ public class BookshelvesPage {
         LoggerManager.info("Clicking Apply Filter button");
         WebElement applyBtn = wait.until(
                 ExpectedConditions.elementToBeClickable(
-                        By.xpath("//button[contains(.,'Apply Filter')]")
-                )
-        );
+                        By.xpath("//button[contains(.,'Apply Filter')]")));
         ((JavascriptExecutor) driver)
                 .executeScript("arguments[0].click();", applyBtn);
         LoggerManager.info("Filters applied successfully");
@@ -172,10 +177,7 @@ public class BookshelvesPage {
     public int getFilteredProductsCount() {
         PopupHandler.closePopupIfPresent(driver);
         WebElement countElement = wait.until(
-                ExpectedConditions.visibilityOfElementLocated(
-                        By.cssSelector("span.PpQnM")
-                )
-        );
+                ExpectedConditions.visibilityOf(productsCount));
         wait.until(driver -> {
             String text = countElement.getText()
                     .replaceAll("[^0-9]", "");
@@ -224,16 +226,12 @@ public class BookshelvesPage {
     }
 
     public String clickFirstProduct() {
+
         PopupHandler.closePopupIfPresent(driver);
-        WebElement product = wait.until(
-                ExpectedConditions.visibilityOfElementLocated(
-                        By.xpath("(//h2[contains(@class,'XxwSy')])[1]")
-                )
-        );
-        String productName = product.getText();
+        wait.until(ExpectedConditions.visibilityOf(firstProduct));
+        String productName = firstProduct.getText();
         LoggerManager.info("Selected Product : " + productName);
-        ((JavascriptExecutor) driver)
-                .executeScript("arguments[0].click();", product);
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", firstProduct);
         return productName;
     }
 
@@ -318,15 +316,10 @@ public class BookshelvesPage {
 
         PopupHandler.closePopupIfPresent(driver);
         LoggerManager.info("Clicking Sort By");
-        wait.until(ExpectedConditions.elementToBeClickable(sortBy))
-                .click();
-
+        wait.until(ExpectedConditions.elementToBeClickable(sortBy)).click();
         LoggerManager.info("Selecting Discount High To Low");
-        wait.until(ExpectedConditions.elementToBeClickable(discountHighToLow))
-                .click();
-
+        wait.until(ExpectedConditions.elementToBeClickable(discountHighToLow)).click();
         LoggerManager.info("Discount sorting applied");
-
         wait.until(ExpectedConditions.visibilityOfAllElements(productCards));
     }
 
@@ -336,8 +329,7 @@ public class BookshelvesPage {
         while (productNames.size() < 20) {
             int currentCount = productNames.size();
             js.executeScript("window.scrollBy(0,1000)");
-            wait.until(driver ->
-                    productNames.size() > currentCount || productNames.size() >= 20);
+            wait.until(driver -> productNames.size() > currentCount || productNames.size() >= 20);
         }
         LoggerManager.info("Minimum 20 products loaded");
     }
@@ -369,5 +361,23 @@ public class BookshelvesPage {
         return productData;
     }
 
+    public void clickBookshelvesCategory() {
+        PopupHandler.closePopupIfPresent(driver);
+        ((JavascriptExecutor) driver)
+                .executeScript(
+                        "arguments[0].scrollIntoView({block:'center'});",
+                        bookshelvesCategory);
+        wait.until(
+                ExpectedConditions.elementToBeClickable(
+                        bookshelvesCategory));
+        bookshelvesCategory.click();
+        LoggerManager.info(
+                "Clicked Bookshelves category");
+    }
+
+    public String getFirstProductImageUrl() {
+        wait.until(ExpectedConditions.visibilityOf(firstProductImage));
+        return firstProductImage.getAttribute("src");
+    }
 
 }

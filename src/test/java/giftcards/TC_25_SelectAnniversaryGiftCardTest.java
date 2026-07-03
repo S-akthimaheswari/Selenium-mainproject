@@ -8,11 +8,14 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.Status;
 import utils.LoggerManager;
 import utils.ExtentReportManager;
+import utils.ScreenshotUtils;
 
-public class TC_22_SelectAnniversaryGiftCardTest extends BaseTest {
+import java.io.IOException;
+
+public class TC_25_SelectAnniversaryGiftCardTest extends BaseTest {
 
     @Test
-    public void selectAnniversaryCard() {
+    public void selectAnniversaryCard() throws IOException {
 
         ExtentReportManager.createTest("TC_22 - Select Anniversary Gift Card");
         LoggerManager.info("Starting TC_22");
@@ -22,6 +25,8 @@ public class TC_22_SelectAnniversaryGiftCardTest extends BaseTest {
         page.switchToGiftCardWindow();
         ExtentReportManager.getTest().log(Status.INFO, "Navigated to Gift Card page");
         page.selectAnniversaryCard();
+        ScreenshotUtils.capturePageScreenshot(driver, "TC_25_SelectAnniversaryGiftCardTest");
+
         ExtentReportManager.getTest().log(Status.INFO, "Clicked Anniversary card");
         boolean result = page.isAnniversaryCardSelected();
         Assert.assertTrue(result, "Anniversary card not selected");

@@ -8,10 +8,7 @@ public class PopupHandler {
     public static void closePopupIfPresent(WebDriver driver) {
 
         try {
-
-            JavascriptExecutor js =
-                    (JavascriptExecutor) driver;
-
+            JavascriptExecutor js = (JavascriptExecutor) driver;
             Object result = js.executeScript("" +
                     "let popup = document.querySelector('ct-web-popup-imageonly');" +
                     "if(popup && popup.shadowRoot){" +
@@ -23,13 +20,10 @@ public class PopupHandler {
                     "}" +
                     "return false;"
             );
-
             if(Boolean.TRUE.equals(result)) {
                 LoggerManager.info("Popup closed");
             }
-
         } catch (Exception e) {
-
             LoggerManager.info("Popup not present");
         }
     }

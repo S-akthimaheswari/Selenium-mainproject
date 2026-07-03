@@ -1,53 +1,67 @@
 package org.furniture.pages;
+
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.*;
 import utils.LoggerManager;
 import utils.PopupHandler;
-
 import java.time.Duration;
 
 public class GiftCardsPage {
+
     WebDriver driver;
     WebDriverWait wait;
+
     public GiftCardsPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
         wait = new WebDriverWait(driver, Duration.ofSeconds(25));
     }
-    // Gift Cards Link
+    // Navigation
     @FindBy(xpath = "//a[text()='Gift Cards']")
     WebElement giftCardsLink;
-    // Anniversary Card
-    By anniversaryCard = By.xpath("(//*[@id='design-theme']//img)[3]");
-    // Form Fields
-    By amountField = By.id("denomination");
-    By quantityField = By.id("quantity");
-    // Sender Details
-    public By senderFirstName =
-            By.xpath("//div[@id='sender-details']//input[@id='firstname']");
-    By senderLastName =
-            By.xpath("//div[@id='sender-details']//input[@id='lastname']");
-    By senderEmail =
-            By.xpath("//div[@id='sender-details']//input[@id='email']");
-    By senderMobile =
-            By.xpath("//div[@id='sender-details']//input[@id='telephone']");
-    // Receiver Details
-    By receiverFirstName =
-            By.xpath("//div[@id='receiver-details']//input[@id='firstname']");
-    By receiverLastName =
-            By.xpath("//div[@id='receiver-details']//input[@id='lastname']");
-    By receiverEmail =
-            By.xpath("//div[@id='receiver-details']//input[@id='email']");
+    // Card
+    @FindBy(xpath = "(//*[@id='design-theme']//img)[3]")
+    WebElement anniversaryCard;
+    // Form
+    @FindBy(id = "denomination")
+    WebElement amountField;
+    @FindBy(id = "quantity")
+    WebElement quantityField;
+    // Sender
+    @FindBy(xpath = "//div[@id='sender-details']//input[@id='firstname']")
+    public WebElement senderFirstName;
+    @FindBy(xpath = "//div[@id='sender-details']//input[@id='lastname']")
+    WebElement senderLastName;
+    @FindBy(xpath = "//div[@id='sender-details']//input[@id='email']")
+    WebElement senderEmail;
+    @FindBy(xpath = "//div[@id='sender-details']//input[@id='telephone']")
+    WebElement senderMobile;
+    // Receiver
+    @FindBy(xpath = "//div[@id='receiver-details']//input[@id='firstname']")
+    WebElement receiverFirstName;
+    @FindBy(xpath = "//div[@id='receiver-details']//input[@id='lastname']")
+    WebElement receiverLastName;
+    @FindBy(xpath = "//div[@id='receiver-details']//input[@id='email']")
+    WebElement receiverEmail;
     // Message
-    By messageBox = By.id("giftMessage");
-    // Email Validation Message
+    @FindBy(id = "giftMessage")
+    WebElement messageBox;
+    // Validation
     By senderEmailError =
             By.xpath("//div[contains(@class,'invalid-address')]");
-
-// Navigation
-
+    // Preview
+    @FindBy(xpath = "//button[contains(@class,'preview-button')]")
+    WebElement previewButton;
+    @FindBy(xpath = "//div[contains(@class,'modal-content')]")
+    WebElement voucherPopup;
+    // Delivery Date
+    @FindBy(xpath = "//button[contains(.,'Send later')]")
+    WebElement sendLaterRadio;
+    @FindBy(css = "span.gift-date")
+    WebElement selectedDeliveryDateText;
+    // Navigation
     public void clickGiftCards() {
         PopupHandler.closePopupIfPresent(driver);
         LoggerManager.info("Clicking Gift Cards link");
@@ -72,29 +86,25 @@ public class GiftCardsPage {
         return driver.getCurrentUrl().contains("woohoo");
     }
 
-    // Anniversary Card
+    // Card
     public void selectAnniversaryCard() {
-        WebElement card = wait.until(
-                ExpectedConditions.visibilityOfElementLocated(anniversaryCard)
-        );
+        wait.until(ExpectedConditions.visibilityOf(anniversaryCard));
         ((JavascriptExecutor) driver).executeScript(
                 "arguments[0].scrollIntoView({block:'center'});",
-                card
+                anniversaryCard
         );
-        wait.until(ExpectedConditions.elementToBeClickable(card));
+        wait.until(ExpectedConditions.elementToBeClickable(anniversaryCard));
         ((JavascriptExecutor) driver).executeScript(
-                "arguments[0].click();", card
+                "arguments[0].click();",
+                anniversaryCard
         );
         LoggerManager.info("Anniversary card selected");
     }
 
     public boolean isAnniversaryCardSelected() {
-
         try {
-            WebElement card = wait.until(
-                    ExpectedConditions.visibilityOfElementLocated(anniversaryCard)
-            );
-            return card.getAttribute("class")
+            wait.until(ExpectedConditions.visibilityOf(anniversaryCard));
+            return anniversaryCard.getAttribute("class")
                     .contains("border-secondary");
         } catch (Exception e) {
             return false;
@@ -102,7 +112,7 @@ public class GiftCardsPage {
     }
     // Form
     public void waitForGiftCardFormToLoad() {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(amountField));
+        wait.until(ExpectedConditions.visibilityOf(amountField));
         LoggerManager.info("Gift card form loaded");
     }
 
@@ -116,74 +126,38 @@ public class GiftCardsPage {
                                  String receiverLName,
                                  String receiverEmailVal,
                                  String message) {
-
         PopupHandler.closePopupIfPresent(driver);
         LoggerManager.info("Filling Gift Card form");
-
-        WebElement amt = wait.until(
-                ExpectedConditions.elementToBeClickable(amountField));
-        amt.clear();
-        amt.sendKeys(amount);
-
-        WebElement qty = wait.until(
-                ExpectedConditions.elementToBeClickable(quantityField));
-        qty.clear();
-        qty.sendKeys(quantity);
-
-        WebElement sFN = wait.until(
-                ExpectedConditions.elementToBeClickable(senderFirstName));
-        sFN.clear();
-        sFN.sendKeys(senderFName);
-
-        WebElement sLN = wait.until(
-                ExpectedConditions.elementToBeClickable(senderLastName));
-        sLN.clear();
-        sLN.sendKeys(senderLName);
-
-        WebElement sEmail = wait.until(
-                ExpectedConditions.elementToBeClickable(senderEmail));
-        sEmail.clear();
-        sEmail.sendKeys(senderEmailVal);
-
-        WebElement sMob = wait.until(
-                ExpectedConditions.elementToBeClickable(senderMobile));
-        sMob.clear();
-        sMob.sendKeys(senderMobileVal);
-
-        WebElement rFN = wait.until(
-                ExpectedConditions.elementToBeClickable(receiverFirstName));
-        rFN.clear();
-        rFN.sendKeys(receiverFName);
-
-        WebElement rLN = wait.until(
-                ExpectedConditions.elementToBeClickable(receiverLastName));
-        rLN.clear();
-        rLN.sendKeys(receiverLName);
-
-        WebElement rEmail = wait.until(
-                ExpectedConditions.elementToBeClickable(receiverEmail));
-        rEmail.clear();
-        rEmail.sendKeys(receiverEmailVal);
-
-        WebElement msg = wait.until(
-                ExpectedConditions.elementToBeClickable(messageBox));
-        msg.clear();
-        msg.sendKeys(message);
-
+        amountField.clear();
+        amountField.sendKeys(amount);
+        quantityField.clear();
+        quantityField.sendKeys(quantity);
+        senderFirstName.clear();
+        senderFirstName.sendKeys(senderFName);
+        senderLastName.clear();
+        senderLastName.sendKeys(senderLName);
+        senderEmail.clear();
+        senderEmail.sendKeys(senderEmailVal);
+        senderMobile.clear();
+        senderMobile.sendKeys(senderMobileVal);
+        receiverFirstName.clear();
+        receiverFirstName.sendKeys(receiverFName);
+        receiverLastName.clear();
+        receiverLastName.sendKeys(receiverLName);
+        receiverEmail.clear();
+        receiverEmail.sendKeys(receiverEmailVal);
+        messageBox.clear();
+        messageBox.sendKeys(message);
         wait.until(ExpectedConditions.attributeToBe(
                 senderFirstName, "value", senderFName));
-
         wait.until(ExpectedConditions.attributeToBe(
                 senderEmail, "value", senderEmailVal));
-
         LoggerManager.info("Gift Card form filled successfully");
     }
-    // Email Validation
+    // Validation
     public void triggerEmailValidation() {
-        WebElement emailField = wait.until(
-                ExpectedConditions.visibilityOfElementLocated(senderEmail)
-        );
-        emailField.sendKeys(Keys.TAB);
+        wait.until(ExpectedConditions.visibilityOf(senderEmail));
+        senderEmail.sendKeys(Keys.TAB);
         wait.until(
                 ExpectedConditions.visibilityOfElementLocated(senderEmailError)
         );
@@ -191,45 +165,81 @@ public class GiftCardsPage {
     }
 
     public String getSenderEmailErrorMessage() {
-        WebElement error = wait.until(
+        return wait.until(
                 ExpectedConditions.visibilityOfElementLocated(senderEmailError)
-        );
-        return error.getText().trim();
+        ).getText().trim();
+    }
+
+    public void clickSenderFirstName() {
+        wait.until(ExpectedConditions.visibilityOf(senderFirstName));
+        ((JavascriptExecutor) driver)
+                .executeScript("arguments[0].click();", senderFirstName);
+        LoggerManager.info("Clicked Sender First Name field");
     }
     // Getters
     public String getAmountValue() {
-        return driver.findElement(amountField).getAttribute("value");
+        return amountField.getAttribute("value");
     }
 
     public String getQuantityValue() {
-        return driver.findElement(quantityField).getAttribute("value");
+        return quantityField.getAttribute("value");
     }
 
     public String getSenderFirstNameValue() {
-        return driver.findElement(senderFirstName).getAttribute("value");
+        return senderFirstName.getAttribute("value");
     }
 
     public String getSenderLastNameValue() {
-        return driver.findElement(senderLastName).getAttribute("value");
+        return senderLastName.getAttribute("value");
     }
 
     public String getSenderEmailValue() {
-        return driver.findElement(senderEmail).getAttribute("value");
+        return senderEmail.getAttribute("value");
     }
 
     public String getSenderMobileValue() {
-        return driver.findElement(senderMobile).getAttribute("value");
+        return senderMobile.getAttribute("value");
     }
 
     public String getReceiverFirstNameValue() {
-        return driver.findElement(receiverFirstName).getAttribute("value");
+        return receiverFirstName.getAttribute("value");
     }
 
     public String getReceiverLastNameValue() {
-        return driver.findElement(receiverLastName).getAttribute("value");
+        return receiverLastName.getAttribute("value");
     }
 
     public String getReceiverEmailValue() {
-        return driver.findElement(receiverEmail).getAttribute("value");
+        return receiverEmail.getAttribute("value");
+    }
+
+    // Delivery Date
+    public void selectDeliveryDate(String deliveryDate) {
+        wait.until(
+                ExpectedConditions.elementToBeClickable(sendLaterRadio)
+        ).click();
+        LoggerManager.info("Send Later selected");
+        By dateLocator = By.xpath("//span[@aria-label='" + deliveryDate + "']");
+        wait.until(
+                ExpectedConditions.elementToBeClickable(dateLocator)
+        ).click();
+        wait.until(
+                ExpectedConditions.visibilityOf(selectedDeliveryDateText)
+        );
+        LoggerManager.info("Delivery Date Selected : " + deliveryDate);
+    }
+
+    public String getSelectedDeliveryDate() {
+        return wait.until(
+                ExpectedConditions.visibilityOf(selectedDeliveryDateText)
+        ).getText().trim();
+    }
+
+    public boolean isDeliveryDateSelected(String deliveryDate) {
+        By selectedDate = By.xpath(
+                "//span[contains(@class,'selected') and @aria-label='"+ deliveryDate + "']");
+        return wait.until(
+                ExpectedConditions.visibilityOfElementLocated(selectedDate)
+        ).isDisplayed();
     }
 }

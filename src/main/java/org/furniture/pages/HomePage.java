@@ -70,6 +70,7 @@ public class HomePage {
 
     // Get all sub-menu of Terra Collection
     public List<String> getTerraCollectionItems() {
+        PopupHandler.closePopupIfPresent(driver);
         List<String> itemsText = new ArrayList<>();
         LoggerManager.info("Capturing Terra Collection submenu items");
         ExtentReportManager.getTest().info("Fetching Terra Collection items");
@@ -80,6 +81,24 @@ public class HomePage {
             itemsText.add(text);
         }
         return itemsText;
+    }
+
+    public void clickTerraCollection() {
+        PopupHandler.closePopupIfPresent(driver);
+        LoggerManager.info("Waiting for Terra Collection option");
+        wait.until(ExpectedConditions.visibilityOf(terraCollection));
+        LoggerManager.info("Clicking Terra Collection");
+        ExtentReportManager.getTest().info("Clicking Terra Collection");
+        terraCollection.click();
+    }
+
+    public boolean isTerraCollectionPageDisplayed() {
+        PopupHandler.closePopupIfPresent(driver);
+        LoggerManager.info("Validating Terra Collection page");
+        wait.until(ExpectedConditions.urlContains("new-terra-collection"));
+        String currentUrl = driver.getCurrentUrl();
+        LoggerManager.info("Current URL: " + currentUrl);
+        return currentUrl.contains("new-terra-collection");
     }
 
     // Click Terra Bedroom

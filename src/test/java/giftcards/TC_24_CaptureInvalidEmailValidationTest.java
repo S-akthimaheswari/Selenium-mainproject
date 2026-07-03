@@ -1,11 +1,10 @@
 package giftcards;
+
 import base.BaseTest;
+import com.aventstack.extentreports.Status;
 import org.furniture.pages.GiftCardsPage;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import com.aventstack.extentreports.Status;
 import utils.ConfigReader;
 import utils.ExcelUtils;
 import utils.ExtentReportManager;
@@ -23,8 +22,10 @@ public class TC_24_CaptureInvalidEmailValidationTest extends BaseTest {
             page.switchToGiftCardWindow();
             page.selectAnniversaryCard();
             page.waitForGiftCardFormToLoad();
-            String filePath = ConfigReader.getProperty("excel.input.path");
-            String sheetName = ConfigReader.getProperty("giftcard.sheet");
+            String filePath =
+                    ConfigReader.getProperty("excel.input.path");
+            String sheetName =
+                    ConfigReader.getProperty("giftcard.sheet");
             ExcelUtils.setExcelFile(filePath, sheetName);
             int row = 2;
             String amount = ExcelUtils.getCellData(row, 0);
@@ -37,20 +38,35 @@ public class TC_24_CaptureInvalidEmailValidationTest extends BaseTest {
             String receiverLName = ExcelUtils.getCellData(row, 7);
             String receiverEmail = ExcelUtils.getCellData(row, 8);
             String message = ExcelUtils.getCellData(row, 9);
+
             LoggerManager.info("Excel data fetched successfully");
-            page.fillGiftCardForm(amount, quantity, senderFName, senderLName, senderEmail, senderMobile, receiverFName, receiverLName, receiverEmail, message);
+            page.fillGiftCardForm(
+                    amount,
+                    quantity,
+                    senderFName,
+                    senderLName,
+                    senderEmail,
+                    senderMobile,
+                    receiverFName,
+                    receiverLName,
+                    receiverEmail,
+                    message
+            );
             page.triggerEmailValidation();
             String actualError = page.getSenderEmailErrorMessage();
             LoggerManager.info("Actual Validation Message : " + actualError);
-            WebElement firstName = driver.findElement(page.senderFirstName);
-            ((JavascriptExecutor) driver)
-                    .executeScript("arguments[0].click();", firstName);
-            Assert.assertEquals(actualError, "Enter valid Email ID.", "Validation message mismatch");
+            page.clickSenderFirstName();
+            Assert.assertEquals(actualError,"Enter valid Email ID.",
+                    "Validation message mismatch");
             LoggerManager.info("Invalid Email Validation Verified Successfully");
-            ExtentReportManager.getTest().log(Status.PASS, "Validation message verified successfully : " + actualError);
+            ExtentReportManager.getTest().log(Status.PASS,"Validation message verified successfully : "+ actualError);
+
         } catch (Exception e) {
             LoggerManager.error("Test failed: " + e.getMessage());
-            ExtentReportManager.getTest().log(Status.FAIL, e.getMessage());
+            ExtentReportManager.getTest().log(
+                    Status.FAIL,
+                    e.getMessage()
+            );
             throw e;
         }
     }
