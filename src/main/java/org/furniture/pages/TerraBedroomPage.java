@@ -1,80 +1,91 @@
 package org.furniture.pages;
 
-import org.openqa.selenium.*;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.*;
-import utils.LoggerManager;
+
+import utils.CommonMethods;
 import utils.ExtentReportManager;
-import java.time.Duration;
+import utils.LoggerManager;
+
 import java.util.List;
 
 public class TerraBedroomPage {
-
     WebDriver driver;
-    WebDriverWait wait;
+    CommonMethods commonMethods;
+
     public TerraBedroomPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
-        wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+        commonMethods = new CommonMethods(driver);
     }
 
     @FindBy(xpath = "//div[text()='ALL FILTERS']")
     WebElement allFiltersBtn;
+
     @FindBy(xpath = "//div[@aria-label='Primary Material']")
     WebElement primaryMaterialSection;
+
     @FindBy(xpath = "//div[@aria-label='Bed Size']")
     WebElement bedSizeSection;
+
     @FindBy(xpath = "//div[@aria-label='Storage Type']")
     WebElement storageTypeSection;
+
     @FindBy(xpath = "//div[text()='Solid Wood']")
     WebElement solidWoodCheckbox;
+
     @FindBy(xpath = "//div[text()='King']")
     WebElement kingCheckbox;
+
     @FindBy(xpath = "//div[text()='Non Storage']")
     WebElement nonStorageCheckbox;
+
     @FindBy(xpath = "//button[@data-testid='plp-filter-apply-button']")
     WebElement applyFilterBtn;
+
     @FindBy(xpath = "//span[contains(text(),'Products')]")
     WebElement productCountText;
+
     @FindBy(xpath = "//div[contains(@data-testid,'product')]")
     List<WebElement> productList;
 
     // Apply filters
     public void applyFiltersUsingAllFilters() {
         LoggerManager.info("Clicking All Filters");
-        wait.until(ExpectedConditions.elementToBeClickable(allFiltersBtn)).click();
+        commonMethods.click(allFiltersBtn);
         LoggerManager.info("Expanding Primary Material");
-        wait.until(ExpectedConditions.elementToBeClickable(primaryMaterialSection)).click();
+        commonMethods.click(primaryMaterialSection);
         LoggerManager.info("Selecting Solid Wood");
-        wait.until(ExpectedConditions.visibilityOf(solidWoodCheckbox)).click();
+        commonMethods.click(solidWoodCheckbox);
         LoggerManager.info("Expanding Bed Size");
-        wait.until(ExpectedConditions.elementToBeClickable(bedSizeSection)).click();
+        commonMethods.click(bedSizeSection);
         LoggerManager.info("Selecting King");
-        wait.until(ExpectedConditions.visibilityOf(kingCheckbox)).click();
+        commonMethods.click(kingCheckbox);
         LoggerManager.info("Expanding Storage Type");
-        wait.until(ExpectedConditions.elementToBeClickable(storageTypeSection)).click();
+        commonMethods.click(storageTypeSection);
         LoggerManager.info("Selecting Non Storage");
-        wait.until(ExpectedConditions.visibilityOf(nonStorageCheckbox)).click();
+        commonMethods.click(nonStorageCheckbox);
         LoggerManager.info("Applying filters");
         ExtentReportManager.getTest().info("Applying filters");
-        wait.until(ExpectedConditions.elementToBeClickable(applyFilterBtn)).click();
+        commonMethods.click(applyFilterBtn);
     }
 
-    // Get product count from UI text
+    // Get product count from UI
     public String getProductCountText() {
         LoggerManager.info("Waiting for product count");
-        wait.until(ExpectedConditions.visibilityOf(productCountText));
+        commonMethods.waitForVisibility(productCountText);
         String text = productCountText.getText();
         LoggerManager.info("Product count text: " + text);
         System.out.println(text);
         return text;
     }
 
-    // Get product list size (DOM validation)
+    // Get number of displayed products
     public int getProductListSize() {
         LoggerManager.info("Waiting for product list");
-        wait.until(ExpectedConditions.visibilityOfAllElements(productList));
+        commonMethods.waitForAllElements(productList);
         int size = productList.size();
         LoggerManager.info("Product list size: " + size);
         return size;

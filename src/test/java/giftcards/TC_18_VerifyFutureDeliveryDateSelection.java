@@ -1,7 +1,6 @@
 package giftcards;
 
 import base.BaseTest;
-import com.aventstack.extentreports.Status;
 import org.furniture.pages.GiftCardsPage;
 import org.testng.annotations.Test;
 import utils.ConfigReader;
@@ -13,7 +12,7 @@ import utils.ScreenshotUtils;
 import java.io.IOException;
 
 
-public class TC_26_VerifyFutureDeliveryDateSelection extends BaseTest {
+public class TC_18_VerifyFutureDeliveryDateSelection extends BaseTest {
     @Test
     public void verifyFutureDeliveryDateSelection() throws IOException {
         ExtentReportManager.createTest("TC_26 - Verify Future Delivery Date Selection");
@@ -44,6 +43,5 @@ public class TC_26_VerifyFutureDeliveryDateSelection extends BaseTest {
         ScreenshotUtils.capturePageScreenshot(driver, "TC_26_VerifyFutureDeliveryDateSelection");
         String expectedDate = "20/07/2026";
         Assert.assertEquals(page.getSelectedDeliveryDate(),expectedDate,"Selected delivery date does not match");
-        ExtentReportManager.getTest().log(Status.PASS,"Future delivery date selected successfully");
     }
 }

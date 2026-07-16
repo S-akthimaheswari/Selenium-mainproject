@@ -10,12 +10,9 @@ import utils.LoggerManager;
 import utils.PopupHandler;
 import utils.ScreenshotUtils;
 import java.io.IOException;
-
-
 import java.lang.reflect.Method;
 
 public class BaseTest {
-
     protected WebDriver driver;
 
     @BeforeSuite

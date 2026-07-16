@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import utils.ExtentReportManager;
 import utils.LoggerManager;
 
-public class TC_11_SearchStudyChairsTest extends BaseTest {
+public class TC_19_SearchStudyChairsTest extends BaseTest {
 
     @Test
     public void verifyStudyChairsSearch() {
@@ -18,6 +18,5 @@ public class TC_11_SearchStudyChairsTest extends BaseTest {
         page.searchStudyChairs();
         boolean result = page.isStudyChairsPageDisplayed();
         Assert.assertTrue(result, "Study Chairs page not displayed");
-        ExtentReportManager.getTest().pass("Study Chairs page displayed successfully ✅");
     }
 }

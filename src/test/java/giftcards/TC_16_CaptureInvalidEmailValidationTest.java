@@ -1,7 +1,6 @@
 package giftcards;
 
 import base.BaseTest;
-import com.aventstack.extentreports.Status;
 import org.furniture.pages.GiftCardsPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -10,7 +9,7 @@ import utils.ExcelUtils;
 import utils.ExtentReportManager;
 import utils.LoggerManager;
 
-public class TC_24_CaptureInvalidEmailValidationTest extends BaseTest {
+public class TC_16_CaptureInvalidEmailValidationTest extends BaseTest {
 
     @Test
     public void validateInvalidSenderEmail() throws Exception {
@@ -22,11 +21,10 @@ public class TC_24_CaptureInvalidEmailValidationTest extends BaseTest {
             page.switchToGiftCardWindow();
             page.selectAnniversaryCard();
             page.waitForGiftCardFormToLoad();
-            String filePath =
-                    ConfigReader.getProperty("excel.input.path");
-            String sheetName =
-                    ConfigReader.getProperty("giftcard.sheet");
+            String filePath = ConfigReader.getProperty("excel.input.path");
+            String sheetName = ConfigReader.getProperty("giftcard.sheet");
             ExcelUtils.setExcelFile(filePath, sheetName);
+
             int row = 2;
             String amount = ExcelUtils.getCellData(row, 0);
             String quantity = ExcelUtils.getCellData(row, 1);
@@ -52,6 +50,7 @@ public class TC_24_CaptureInvalidEmailValidationTest extends BaseTest {
                     receiverEmail,
                     message
             );
+
             page.triggerEmailValidation();
             String actualError = page.getSenderEmailErrorMessage();
             LoggerManager.info("Actual Validation Message : " + actualError);
@@ -59,14 +58,9 @@ public class TC_24_CaptureInvalidEmailValidationTest extends BaseTest {
             Assert.assertEquals(actualError,"Enter valid Email ID.",
                     "Validation message mismatch");
             LoggerManager.info("Invalid Email Validation Verified Successfully");
-            ExtentReportManager.getTest().log(Status.PASS,"Validation message verified successfully : "+ actualError);
 
         } catch (Exception e) {
             LoggerManager.error("Test failed: " + e.getMessage());
-            ExtentReportManager.getTest().log(
-                    Status.FAIL,
-                    e.getMessage()
-            );
             throw e;
         }
     }

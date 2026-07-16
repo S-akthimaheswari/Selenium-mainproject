@@ -1,6 +1,6 @@
 package org.furniture.pages;
 
-import utils.PopupHandler;
+import utils.CommonMethods;
 import utils.LoggerManager;
 import java.time.Duration;
 import java.util.List;
@@ -18,33 +18,37 @@ public class StudyChairsPage {
 
     WebDriver driver;
     WebDriverWait wait;
+    CommonMethods cm;
 
     public StudyChairsPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
+         cm = new CommonMethods(driver);
         wait = new WebDriverWait(driver, Duration.ofSeconds(15));
     }
     // Search Box
     @FindBy(id = "searchInput")
     WebElement searchBox;
-    // Study Chairs Page Title
-    @FindBy(xpath = "//h1[contains(text(),'Study Chairs')]")
-    WebElement title;
+
     // Sort By Dropdown
     @FindBy(xpath = "//span[contains(text(),'Sort By')]")
     WebElement sortByDropdown;
+
     // Product Names
     @FindBy(xpath = "//h2[contains(@class,'XxwSy')]")
     List<WebElement> productNames;
+
     @FindBy(xpath = "//div[contains(text(),'₹')]")
     List<WebElement> productPrices;
+
     @FindBy(xpath="//span[contains(text(),'OFF')]")
     List<WebElement> discountPercentages;
+
     // Search Study Chairs
     public void searchStudyChairs() {
         LoggerManager.info("Waiting for search box");
-        PopupHandler.closePopupIfPresent(driver);
-        wait.until(ExpectedConditions.visibilityOf(searchBox));
+        cm.closePopup();
+        cm.waitForVisibility(searchBox);
         LoggerManager.info("Clicking search box");
         searchBox.click();
         LoggerManager.info("Typing Study Chairs");
@@ -58,17 +62,16 @@ public class StudyChairsPage {
                         By.xpath("//h1[contains(text(),'Study Chairs')]")),
                 ExpectedConditions.titleContains("Study Chairs")
         ));
-
     }
-    // Verify Study Chairs Page Displayed
+
     public boolean isStudyChairsPageDisplayed() {
         return !driver.findElements(
                         By.xpath("//h1[contains(text(),'Study Chairs')]"))
                 .isEmpty();
     }
-    // Get Product Count
+
     public int getStudyChairsCount() {
-        PopupHandler.closePopupIfPresent(driver);
+        cm.closePopup();
         WebElement countElement = wait.until(
                 ExpectedConditions.visibilityOfElementLocated(
                         By.cssSelector("span.PpQnM")
@@ -77,44 +80,32 @@ public class StudyChairsPage {
         wait.until(driver -> {
             String text = countElement.getText()
                     .replaceAll("[^0-9]", "");
-            if(text.isEmpty()) {
+            if (text.isEmpty()) {
                 return false;
             }
             return Integer.parseInt(text) > 0;
         });
         String countText = countElement.getText();
-        LoggerManager.info(
-                "Study Chairs Count : " + countText);
-        return Integer.parseInt(
-                countText.replaceAll("[^0-9]", "")
-        );
+        LoggerManager.info("Study Chairs Count : " + countText);
+        return Integer.parseInt(countText.replaceAll("[^0-9]", ""));
     }
-    // Click Sort By
-    public void clickSortBy() {
-        PopupHandler.closePopupIfPresent(driver);
-        LoggerManager.info("Clicking Sort By");
-        wait.until(
-                ExpectedConditions.elementToBeClickable(
-                        sortByDropdown)
-        ).click();
-    }
-    // Select Popularity
-    public void selectPopularity() {
 
-        PopupHandler.closePopupIfPresent(driver);
-        LoggerManager.info("Selecting Popularity");
-        WebElement popularity = wait.until(
-                ExpectedConditions.elementToBeClickable(
-                        By.xpath("//div[contains(text(),'Popularity')]")
-                )
-        );
-        popularity.click();
-        LoggerManager.info(
-                "Popularity selected successfully");
+    public void clickSortBy() {
+        cm.closePopup();
+        LoggerManager.info("Clicking Sort By");
+        cm.click(sortByDropdown);
     }
-    // Top 3 Products
+
+    public void selectPopularity() {
+        cm.closePopup();
+        LoggerManager.info("Selecting Popularity");
+        WebElement popularity = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(text(),'Popularity')]")));
+        popularity.click();
+        LoggerManager.info("Popularity selected successfully");
+    }
+
     public List<String> getTopThreeProducts() {
-        PopupHandler.closePopupIfPresent(driver);
+        cm.closePopup();
         wait.until(ExpectedConditions.visibilityOfAllElements(productNames));
         return productNames.stream()
                 .filter(WebElement::isDisplayed)
@@ -122,14 +113,19 @@ public class StudyChairsPage {
                 .map(WebElement::getText)
                 .collect(Collectors.toList());
     }
+
     public void selectDiscountHighToLow() {
         LoggerManager.info("Selecting Discount High To Low");
-        WebElement discount = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[contains(text(),'Discount High to Low')]")));
+        WebElement discount = wait.until(
+                ExpectedConditions.elementToBeClickable(
+                        By.xpath("//*[contains(text(),'Discount High to Low')]")));
+
         discount.click();
         LoggerManager.info("Discount High To Low selected successfully");
     }
+
     public void printTopFiveDiscountProducts() {
-        PopupHandler.closePopupIfPresent(driver);
+        cm.closePopup();
         wait.until(ExpectedConditions.visibilityOfAllElements(productNames));
         int count = Math.min(5, productNames.size());
         for(int i = 0; i < count; i++) {
